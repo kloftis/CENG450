@@ -1,0 +1,238 @@
+Release 10.1.03 - par K.39 (nt)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+
+Fri Mar 21 14:26:41 2014
+
+
+INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:
+1. The <design name>_pad.txt file (this file) designed to provide information on IO usage in a human readable ASCII text format viewable through common text editors.
+2. The <design namd>_pad.csv file for use with spreadsheet programs such as MS Excel. This file can also be read by PACE to communicate post PAR IO information.
+3. The <design name>.pad file designed for parsing by customers.  It uses the "|" as a data field separator.
+
+INPUT FILE:       Processor_map.ncd
+OUTPUT FILE:      Processor_pad.txt
+PART TYPE:        xc2s200
+SPEED GRADE:      -6
+PACKAGE:          pq208
+
+Pinout by Pin Number:
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|Pin Number|Signal Name      |Pin Usage|Pin Name    |Direction|IO Standard|IO Bank Number|Drive (mA)|Slew Rate|Termination|IOB Delay|Voltage|Constraint|DCI Value|IO Register|Signal Integrity|
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|P1        |                 |         |GND         |         |           |              |          |         |           |         |       |          |         |           |                |
+|P2        |                 |         |TMS         |         |           |              |          |         |           |         |       |          |         |           |                |
+|P3        |                 |IOB      |IO          |UNUSED   |           |7             |          |         |           |         |       |          |         |           |                |
+|P4        |PC_EN            |IOB      |IO_VREF_7   |OUTPUT   |LVTTL*     |7             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P5        |PC_DIS           |IOB      |IO          |OUTPUT   |LVTTL*     |7             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P6        |                 |IOB      |IO_VREF_7   |UNUSED   |           |7             |          |         |           |         |       |          |         |           |                |
+|P7        |IF_INSTR2<0>     |IOB      |IO          |OUTPUT   |LVTTL*     |7             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P8        |                 |IOB      |IO          |UNUSED   |           |7             |          |         |           |         |       |          |         |           |                |
+|P9        |PC_LR_GOTO       |IOB      |IO_VREF_7   |OUTPUT   |LVTTL*     |7             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P10       |                 |IOB      |IO          |UNUSED   |           |7             |          |         |           |         |       |          |         |           |                |
+|P11       |                 |         |GND         |         |           |              |          |         |           |         |       |          |         |           |                |
+|P12       |                 |         |VCCO        |         |           |0             |          |         |           |         |3.30   |          |         |           |                |
+|P13       |                 |         |VCCINT      |         |           |              |          |         |           |         |2.5    |          |         |           |                |
+|P14       |                 |IOB      |IO          |UNUSED   |           |7             |          |         |           |         |       |          |         |           |                |
+|P15       |PC_OUT<7>        |IOB      |IO          |OUTPUT   |LVTTL*     |7             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P16       |IO_INPUT_PORT<0> |IOB      |IO          |INPUT    |LVTTL*     |7             |          |         |           |NONE     |       |LOCATED   |         |NO         |NONE            |
+|P17       |                 |IOB      |IO          |UNUSED   |           |7             |          |         |           |         |       |          |         |           |                |
+|P18       |IO_INPUT_PORT<1> |IOB      |IO          |INPUT    |LVTTL*     |7             |          |         |           |NONE     |       |LOCATED   |         |NO         |NONE            |
+|P19       |                 |         |GND         |         |           |              |          |         |           |         |       |          |         |           |                |
+|P20       |                 |IOB      |IO_VREF_7   |UNUSED   |           |7             |          |         |           |         |       |          |         |           |                |
+|P21       |IO_INPUT_PORT<2> |IOB      |IO          |INPUT    |LVTTL*     |7             |          |         |           |NONE     |       |LOCATED   |         |NO         |NONE            |
+|P22       |                 |IOB      |IO          |UNUSED   |           |7             |          |         |           |         |       |          |         |           |                |
+|P23       |IO_INPUT_PORT<3> |IOB      |IO          |INPUT    |LVTTL*     |7             |          |         |           |NONE     |       |LOCATED   |         |NO         |NONE            |
+|P24       |PC_BR            |IOB      |IO_IRDY     |OUTPUT   |LVTTL*     |7             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P25       |                 |         |GND         |         |           |              |          |         |           |         |       |          |         |           |                |
+|P26       |                 |         |VCCO        |         |           |0             |          |         |           |         |3.30   |          |         |           |                |
+|P27       |IO_INPUT_PORT<4> |IOB      |IO_TRDY     |INPUT    |LVTTL*     |6             |          |         |           |NONE     |       |LOCATED   |         |NO         |NONE            |
+|P28       |                 |         |VCCINT      |         |           |              |          |         |           |         |2.5    |          |         |           |                |
+|P29       |EX_MEM_WR_EN     |IOB      |IO          |OUTPUT   |LVTTL*     |6             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P30       |IO_INPUT_PORT<5> |IOB      |IO          |INPUT    |LVTTL*     |6             |          |         |           |NONE     |       |LOCATED   |         |NO         |NONE            |
+|P31       |WB_REG<1>        |IOB      |IO_VREF_6   |OUTPUT   |LVTTL*     |6             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P32       |                 |         |GND         |         |           |              |          |         |           |         |       |          |         |           |                |
+|P33       |IO_INPUT_PORT<6> |IOB      |IO          |INPUT    |LVTTL*     |6             |          |         |           |NONE     |       |LOCATED   |         |NO         |NONE            |
+|P34       |PC_OUT<5>        |IOB      |IO          |OUTPUT   |LVTTL*     |6             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P35       |IO_INPUT_PORT<7> |IOB      |IO          |INPUT    |LVTTL*     |6             |          |         |           |NONE     |       |LOCATED   |         |NO         |NONE            |
+|P36       |PC_OUT<4>        |IOB      |IO          |OUTPUT   |LVTTL*     |6             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P37       |PC_OUT<6>        |IOB      |IO          |OUTPUT   |LVTTL*     |6             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P38       |                 |         |VCCINT      |         |           |              |          |         |           |         |2.5    |          |         |           |                |
+|P39       |                 |         |VCCO        |         |           |0             |          |         |           |         |3.30   |          |         |           |                |
+|P40       |                 |         |GND         |         |           |              |          |         |           |         |       |          |         |           |                |
+|P41       |RST              |IOB      |IO          |INPUT    |LVTTL*     |6             |          |         |           |NONE     |       |LOCATED   |         |NO         |NONE            |
+|P42       |PC_OUT<3>        |IOB      |IO_VREF_6   |OUTPUT   |LVTTL*     |6             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P43       |PC_OUT<2>        |IOB      |IO          |OUTPUT   |LVTTL*     |6             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P44       |IO_OUTPUT_PORT<0>|IOB      |IO          |TRISTATE |LVTTL*     |6             |12        |SLOW     |NONE**     |         |       |LOCATED   |         |NO         |NONE            |
+|P45       |PC_OUT<1>        |IOB      |IO_VREF_6   |OUTPUT   |LVTTL*     |6             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P46       |IO_OUTPUT_PORT<1>|IOB      |IO          |TRISTATE |LVTTL*     |6             |12        |SLOW     |NONE**     |         |       |LOCATED   |         |NO         |NONE            |
+|P47       |EX_USE_MEM       |IOB      |IO_VREF_6   |OUTPUT   |LVTTL*     |6             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P48       |IO_OUTPUT_PORT<2>|IOB      |IO          |TRISTATE |LVTTL*     |6             |12        |SLOW     |NONE**     |         |       |LOCATED   |         |NO         |NONE            |
+|P49       |PC_OUT<0>        |IOB      |IO          |OUTPUT   |LVTTL*     |6             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P50       |                 |         |M1          |         |           |              |          |         |           |         |       |          |         |           |                |
+|P51       |                 |         |GND         |         |           |              |          |         |           |         |       |          |         |           |                |
+|P52       |                 |         |M0          |         |           |              |          |         |           |         |       |          |         |           |                |
+|P53       |                 |         |VCCO        |         |           |0             |          |         |           |         |3.30   |          |         |           |                |
+|P54       |                 |         |M2          |         |           |              |          |         |           |         |       |          |         |           |                |
+|P55       |                 |         |NC          |         |           |              |          |         |           |         |       |          |         |           |                |
+|P56       |                 |         |NC          |         |           |              |          |         |           |         |       |          |         |           |                |
+|P57       |IO_OUTPUT_PORT<3>|IOB      |IO_VREF_5   |TRISTATE |LVTTL*     |5             |12        |SLOW     |NONE**     |         |       |LOCATED   |         |NO         |NONE            |
+|P58       |EX_RESULT<7>     |IOB      |IO          |OUTPUT   |LVTTL*     |5             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P59       |IO_OUTPUT_PORT<4>|IOB      |IO_VREF_5   |TRISTATE |LVTTL*     |5             |12        |SLOW     |NONE**     |         |       |LOCATED   |         |NO         |NONE            |
+|P60       |EX_RESULT<6>     |IOB      |IO          |OUTPUT   |LVTTL*     |5             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P61       |IO_OUTPUT_PORT<5>|IOB      |IO          |TRISTATE |LVTTL*     |5             |12        |SLOW     |NONE**     |         |       |LOCATED   |         |NO         |NONE            |
+|P62       |EX_RESULT<5>     |IOB      |IO_VREF_5   |OUTPUT   |LVTTL*     |5             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P63       |IO_OUTPUT_PORT<6>|IOB      |IO          |TRISTATE |LVTTL*     |5             |12        |SLOW     |NONE**     |         |       |LOCATED   |         |NO         |NONE            |
+|P64       |                 |         |GND         |         |           |              |          |         |           |         |       |          |         |           |                |
+|P65       |                 |         |VCCO        |         |           |0             |          |         |           |         |3.30   |          |         |           |                |
+|P66       |                 |         |VCCINT      |         |           |              |          |         |           |         |2.5    |          |         |           |                |
+|P67       |EX_RESULT<4>     |IOB      |IO          |OUTPUT   |LVTTL*     |5             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P68       |IO_OUTPUT_PORT<7>|IOB      |IO          |TRISTATE |LVTTL*     |5             |12        |SLOW     |NONE**     |         |       |LOCATED   |         |NO         |NONE            |
+|P69       |EX_ALU_MODE<2>   |IOB      |IO          |OUTPUT   |LVTTL*     |5             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P70       |EX_RESULT<2>     |IOB      |IO          |OUTPUT   |LVTTL*     |5             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P71       |EX_RESULT<3>     |IOB      |IO          |OUTPUT   |LVTTL*     |5             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P72       |                 |         |GND         |         |           |              |          |         |           |         |       |          |         |           |                |
+|P73       |EX_MEM_ADDR<7>   |IOB      |IO_VREF_5   |OUTPUT   |LVTTL*     |5             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P74       |EX_ALU_MODE<1>   |IOB      |IO          |OUTPUT   |LVTTL*     |5             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P75       |EX_RESULT<1>     |IOB      |IO          |OUTPUT   |LVTTL*     |5             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P76       |                 |         |VCCINT      |         |           |              |          |         |           |         |2.5    |          |         |           |                |
+|P77       |                 |GCLKIOB  |GCK1        |UNUSED   |           |5             |          |         |           |         |       |          |         |           |                |
+|P78       |                 |         |VCCO        |         |           |0             |          |         |           |         |3.30   |          |         |           |                |
+|P79       |                 |         |GND         |         |           |              |          |         |           |         |       |          |         |           |                |
+|P80       |                 |GCLKIOB  |GCK0        |UNUSED   |           |4             |          |         |           |         |       |          |         |           |                |
+|P81       |WB_REG<0>        |IOB      |IO          |OUTPUT   |LVTTL*     |4             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P82       |EX_MEM_ADDR<5>   |IOB      |IO          |OUTPUT   |LVTTL*     |4             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P83       |EX_MEM_ADDR<6>   |IOB      |IO          |OUTPUT   |LVTTL*     |4             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P84       |EX_MEM_ADDR<4>   |IOB      |IO_VREF_4   |OUTPUT   |LVTTL*     |4             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P85       |                 |         |GND         |         |           |              |          |         |           |         |       |          |         |           |                |
+|P86       |EX_MEM_ADDR<2>   |IOB      |IO          |OUTPUT   |LVTTL*     |4             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P87       |WB_EN            |IOB      |IO          |OUTPUT   |LVTTL*     |4             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P88       |EX_RESULT<0>     |IOB      |IO          |OUTPUT   |LVTTL*     |4             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P89       |EX_MEM_ADDR<1>   |IOB      |IO          |OUTPUT   |LVTTL*     |4             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P90       |EX_MEM_ADDR<0>   |IOB      |IO          |OUTPUT   |LVTTL*     |4             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P91       |                 |         |VCCINT      |         |           |              |          |         |           |         |2.5    |          |         |           |                |
+|P92       |                 |         |VCCO        |         |           |0             |          |         |           |         |3.30   |          |         |           |                |
+|P93       |                 |         |GND         |         |           |              |          |         |           |         |       |          |         |           |                |
+|P94       |WB_DATA<5>       |IOB      |IO          |OUTPUT   |LVTTL*     |4             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P95       |WB_DATA<6>       |IOB      |IO_VREF_4   |OUTPUT   |LVTTL*     |4             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P96       |WB_DATA<4>       |IOB      |IO          |OUTPUT   |LVTTL*     |4             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P97       |WB_DATA<7>       |IOB      |IO          |OUTPUT   |LVTTL*     |4             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P98       |EX_MEM_ADDR<3>   |IOB      |IO_VREF_4   |OUTPUT   |LVTTL*     |4             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P99       |WB_DATA<3>       |IOB      |IO          |OUTPUT   |LVTTL*     |4             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P100      |WB_DATA<2>       |IOB      |IO_VREF_4   |OUTPUT   |LVTTL*     |4             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P101      |WB_DATA<1>       |IOB      |IO          |OUTPUT   |LVTTL*     |4             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P102      |WB_DATA<0>       |IOB      |IO          |OUTPUT   |LVTTL*     |4             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P103      |                 |         |GND         |         |           |              |          |         |           |         |       |          |         |           |                |
+|P104      |                 |         |DONE        |         |           |              |          |         |           |         |       |          |         |           |                |
+|P105      |                 |         |VCCO        |         |           |0             |          |         |           |         |3.30   |          |         |           |                |
+|P106      |                 |         |PROGRAM     |         |           |              |          |         |           |         |       |          |         |           |                |
+|P107      |EX_ALU_MODE<0>   |IOB      |IO_INIT     |OUTPUT   |LVTTL*     |3             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P108      |EX_ALU_RESULT<7> |IOB      |IO_D7       |OUTPUT   |LVTTL*     |3             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P109      |EX_ALU_RESULT<6> |IOB      |IO_VREF_3   |OUTPUT   |LVTTL*     |3             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P110      |EX_ALU_RESULT<5> |IOB      |IO          |OUTPUT   |LVTTL*     |3             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P111      |EX_ALU_RESULT<4> |IOB      |IO_VREF_3   |OUTPUT   |LVTTL*     |3             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P112      |EX_ALU_RESULT<3> |IOB      |IO          |OUTPUT   |LVTTL*     |3             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P113      |EX_ALU_RESULT<2> |IOB      |IO          |OUTPUT   |LVTTL*     |3             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P114      |EX_ALU_RESULT<1> |IOB      |IO_VREF_3   |OUTPUT   |LVTTL*     |3             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P115      |EX_ALU_RESULT<0> |IOB      |IO_D6       |OUTPUT   |LVTTL*     |3             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P116      |                 |         |GND         |         |           |              |          |         |           |         |       |          |         |           |                |
+|P117      |                 |         |VCCO        |         |           |0             |          |         |           |         |3.30   |          |         |           |                |
+|P118      |                 |         |VCCINT      |         |           |              |          |         |           |         |2.5    |          |         |           |                |
+|P119      |IF_INSTR<7>      |IOB      |IO_D5       |OUTPUT   |LVTTL*     |3             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P120      |IF_INSTR<6>      |IOB      |IO          |OUTPUT   |LVTTL*     |3             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P121      |IF_INSTR<5>      |IOB      |IO          |OUTPUT   |LVTTL*     |3             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P122      |IF_INSTR<4>      |IOB      |IO          |OUTPUT   |LVTTL*     |3             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P123      |IF_INSTR<3>      |IOB      |IO          |OUTPUT   |LVTTL*     |3             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P124      |                 |         |GND         |         |           |              |          |         |           |         |       |          |         |           |                |
+|P125      |IF_INSTR<2>      |IOB      |IO_VREF_3   |OUTPUT   |LVTTL*     |3             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P126      |IF_INSTR<1>      |IOB      |IO_D4       |OUTPUT   |LVTTL*     |3             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P127      |EX_DATA_2<0>     |IOB      |IO          |OUTPUT   |LVTTL*     |3             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P128      |                 |         |VCCINT      |         |           |              |          |         |           |         |2.5    |          |         |           |                |
+|P129      |EX_DATA_2<3>     |IOB      |IO_TRDY     |OUTPUT   |LVTTL*     |3             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P130      |                 |         |VCCO        |         |           |0             |          |         |           |         |3.30   |          |         |           |                |
+|P131      |                 |         |GND         |         |           |              |          |         |           |         |       |          |         |           |                |
+|P132      |EX_DATA_2<2>     |IOB      |IO_IRDY     |OUTPUT   |LVTTL*     |2             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P133      |EX_DATA_2<1>     |IOB      |IO          |OUTPUT   |LVTTL*     |2             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P134      |EX_DATA_2<4>     |IOB      |IO          |OUTPUT   |LVTTL*     |2             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P135      |EX_DATA_2<7>     |IOB      |IO_D3       |OUTPUT   |LVTTL*     |2             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P136      |EX_DATA_1<2>     |IOB      |IO_VREF_2   |OUTPUT   |LVTTL*     |2             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P137      |                 |         |GND         |         |           |              |          |         |           |         |       |          |         |           |                |
+|P138      |EX_DATA_2<5>     |IOB      |IO          |OUTPUT   |LVTTL*     |2             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P139      |EX_DATA_2<6>     |IOB      |IO          |OUTPUT   |LVTTL*     |2             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P140      |EX_DATA_1<5>     |IOB      |IO          |OUTPUT   |LVTTL*     |2             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P141      |EX_DATA_1<6>     |IOB      |IO          |OUTPUT   |LVTTL*     |2             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P142      |EX_DATA_1<3>     |IOB      |IO_D2       |OUTPUT   |LVTTL*     |2             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P143      |                 |         |VCCINT      |         |           |              |          |         |           |         |2.5    |          |         |           |                |
+|P144      |                 |         |VCCO        |         |           |0             |          |         |           |         |3.30   |          |         |           |                |
+|P145      |                 |         |GND         |         |           |              |          |         |           |         |       |          |         |           |                |
+|P146      |EX_DATA_1<4>     |IOB      |IO_D1       |OUTPUT   |LVTTL*     |2             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P147      |EX_DATA_1<7>     |IOB      |IO_VREF_2   |OUTPUT   |LVTTL*     |2             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P148      |EX_DATA_1<0>     |IOB      |IO          |OUTPUT   |LVTTL*     |2             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P149      |EX_DATA_1<1>     |IOB      |IO          |OUTPUT   |LVTTL*     |2             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P150      |ID_OPCODE<2>     |IOB      |IO_VREF_2   |OUTPUT   |LVTTL*     |2             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P151      |IF_INSTR<0>      |IOB      |IO          |OUTPUT   |LVTTL*     |2             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P152      |ID_REG_RD_1<6>   |IOB      |IO_VREF_2   |OUTPUT   |LVTTL*     |2             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P153      |ID_REG_RD_1<5>   |IOB      |IO_DIN_D0   |OUTPUT   |LVTTL*     |2             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P154      |ID_REG_RD_1<4>   |IOB      |IO_DOUT_BUSY|OUTPUT   |LVTTL*     |2             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P155      |                 |         |CCLK        |         |           |              |          |         |           |         |       |          |         |           |                |
+|P156      |                 |         |VCCO        |         |           |0             |          |         |           |         |3.30   |          |         |           |                |
+|P157      |                 |         |TDO         |         |           |              |          |         |           |         |       |          |         |           |                |
+|P158      |                 |         |GND         |         |           |              |          |         |           |         |       |          |         |           |                |
+|P159      |                 |         |TDI         |         |           |              |          |         |           |         |       |          |         |           |                |
+|P160      |ID_OPCODE<3>     |IOB      |IO_CS       |OUTPUT   |LVTTL*     |1             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P161      |ID_OPCODE<0>     |IOB      |IO_WRITE    |OUTPUT   |LVTTL*     |1             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P162      |ID_REG_RD_1<7>   |IOB      |IO_VREF_1   |OUTPUT   |LVTTL*     |1             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P163      |ID_OPCODE<1>     |IOB      |IO          |OUTPUT   |LVTTL*     |1             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P164      |ID_REG_RD_1<2>   |IOB      |IO_VREF_1   |OUTPUT   |LVTTL*     |1             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P165      |ID_REG_RD_1<3>   |IOB      |IO          |OUTPUT   |LVTTL*     |1             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P166      |ID_REG_RD_1<1>   |IOB      |IO          |OUTPUT   |LVTTL*     |1             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P167      |ID_REG_RD_1<0>   |IOB      |IO_VREF_1   |OUTPUT   |LVTTL*     |1             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P168      |EX_MEM_RD_DATA<0>|IOB      |IO          |OUTPUT   |LVTTL*     |1             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P169      |                 |         |GND         |         |           |              |          |         |           |         |       |          |         |           |                |
+|P170      |                 |         |VCCO        |         |           |0             |          |         |           |         |3.30   |          |         |           |                |
+|P171      |                 |         |VCCINT      |         |           |              |          |         |           |         |2.5    |          |         |           |                |
+|P172      |EX_MEM_RD_DATA<1>|IOB      |IO          |OUTPUT   |LVTTL*     |1             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P173      |EX_MEM_RD_DATA<5>|IOB      |IO          |OUTPUT   |LVTTL*     |1             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P174      |EX_MEM_RD_DATA<7>|IOB      |IO          |OUTPUT   |LVTTL*     |1             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P175      |EX_MEM_RD_DATA<4>|IOB      |IO          |OUTPUT   |LVTTL*     |1             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P176      |EX_MEM_RD_DATA<6>|IOB      |IO          |OUTPUT   |LVTTL*     |1             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P177      |                 |         |GND         |         |           |              |          |         |           |         |       |          |         |           |                |
+|P178      |EX_MEM_RD_DATA<3>|IOB      |IO_VREF_1   |OUTPUT   |LVTTL*     |1             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P179      |EX_MEM_RD_DATA<2>|IOB      |IO          |OUTPUT   |LVTTL*     |1             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P180      |ID_REG_RD_2<7>   |IOB      |IO          |OUTPUT   |LVTTL*     |1             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P181      |ID_REG_RD_2<6>   |IOB      |IO          |OUTPUT   |LVTTL*     |1             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P182      |                 |GCLKIOB  |GCK2        |UNUSED   |           |1             |          |         |           |         |       |          |         |           |                |
+|P183      |                 |         |GND         |         |           |              |          |         |           |         |       |          |         |           |                |
+|P184      |                 |         |VCCO        |         |           |0             |          |         |           |         |3.30   |          |         |           |                |
+|P185      |CLK              |GCLKIOB  |GCK3        |INPUT    |LVTTL*     |0             |          |         |           |NONE     |       |LOCATED   |         |NO         |NONE            |
+|P186      |                 |         |VCCINT      |         |           |              |          |         |           |         |2.5    |          |         |           |                |
+|P187      |ID_REG_RD_2<4>   |IOB      |IO          |OUTPUT   |LVTTL*     |0             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P188      |ID_REG_RD_2<2>   |IOB      |IO          |OUTPUT   |LVTTL*     |0             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P189      |ID_REG_RD_2<5>   |IOB      |IO_VREF_0   |OUTPUT   |LVTTL*     |0             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P190      |                 |         |GND         |         |           |              |          |         |           |         |       |          |         |           |                |
+|P191      |ID_REG_RD_2<0>   |IOB      |IO          |OUTPUT   |LVTTL*     |0             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P192      |ID_REG_RD_2<3>   |IOB      |IO          |OUTPUT   |LVTTL*     |0             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P193      |ID_RA<1>         |IOB      |IO          |OUTPUT   |LVTTL*     |0             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P194      |ID_REG_RD_2<1>   |IOB      |IO          |OUTPUT   |LVTTL*     |0             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P195      |ID_RA<0>         |IOB      |IO          |OUTPUT   |LVTTL*     |0             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P196      |                 |         |VCCINT      |         |           |              |          |         |           |         |2.5    |          |         |           |                |
+|P197      |                 |         |VCCO        |         |           |0             |          |         |           |         |3.30   |          |         |           |                |
+|P198      |                 |         |GND         |         |           |              |          |         |           |         |       |          |         |           |                |
+|P199      |IF_INSTR2<7>     |IOB      |IO          |OUTPUT   |LVTTL*     |0             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P200      |IF_INSTR2<2>     |IOB      |IO_VREF_0   |OUTPUT   |LVTTL*     |0             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P201      |IF_INSTR2<6>     |IOB      |IO          |OUTPUT   |LVTTL*     |0             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P202      |IF_INSTR2<4>     |IOB      |IO          |OUTPUT   |LVTTL*     |0             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P203      |IF_INSTR2<5>     |IOB      |IO_VREF_0   |OUTPUT   |LVTTL*     |0             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P204      |IF_INSTR2<3>     |IOB      |IO          |OUTPUT   |LVTTL*     |0             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P205      |IF_INSTR2<1>     |IOB      |IO_VREF_0   |OUTPUT   |LVTTL*     |0             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P206      |PC_LR_RTRN       |IOB      |IO          |OUTPUT   |LVTTL*     |0             |12        |SLOW     |NONE**     |         |       |          |         |NO         |NONE            |
+|P207      |                 |         |TCK         |         |           |              |          |         |           |         |       |          |         |           |                |
+|P208      |                 |         |VCCO        |         |           |0             |          |         |           |         |3.30   |          |         |           |                |
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+* Default value.
+** This default Pullup/Pulldown value can be overridden in Bitgen. 
+****** Special VCCO requirements may apply. Please consult the device 
+       family datasheet for specific guideline on VCCO requirements. 
+
+

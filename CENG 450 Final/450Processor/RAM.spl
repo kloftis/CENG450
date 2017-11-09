@@ -1,0 +1,9 @@
+[Inputs]
+wr_enable
+rst
+clk
+=addr[7:0]=
+=wr_data[7:0]=
+[Outputs]
+=rd_data[7:0]=
+[BiDir]

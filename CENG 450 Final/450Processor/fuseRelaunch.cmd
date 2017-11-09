@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "M:/CENG 450/CENG 450 Final/450Processor/Processor_isim_beh.exe" -prj "M:/CENG 450/CENG 450 Final/450Processor/Processor_beh.prj" "work.Processor" 

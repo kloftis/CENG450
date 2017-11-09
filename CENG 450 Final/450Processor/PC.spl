@@ -1,0 +1,13 @@
+[Inputs]
+EN
+DIS
+BR
+incr_2
+LR_goto
+LR_rtrn
+clk
+rst
+=PC_IN[7:0]=
+[Outputs]
+=PC_OUT[7:0]=
+[BiDir]

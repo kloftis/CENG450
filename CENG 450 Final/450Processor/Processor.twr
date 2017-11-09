@@ -1,0 +1,255 @@
+--------------------------------------------------------------------------------
+Release 10.1.03 Trace  (nt)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\10.1\ISE\bin\nt\unwrapped\trce.exe -ise
+C:/Documents and Settings/kloftis/Desktop/CENG 450 Milestone 2/450Processor/450Processor.ise
+-intstyle ise -v 3 -s 6 -xml Processor Processor.ncd -o Processor.twr
+Processor.pcf -ucf PROC_PINS.ucf
+
+Design file:              Processor.ncd
+Physical constraint file: Processor.pcf
+Device,package,speed:     xc2s200,pq208,-6 (PRODUCTION 1.27 2008-01-09)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock CLK
+----------------+------------+------------+------------------+--------+
+                |  Setup to  |  Hold to   |                  | Clock  |
+Source          | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+----------------+------------+------------+------------------+--------+
+IO_INPUT_PORT<0>|    0.685(R)|   -0.117(R)|CLK_BUFGP         |   0.000|
+IO_INPUT_PORT<1>|    0.832(R)|   -0.284(R)|CLK_BUFGP         |   0.000|
+IO_INPUT_PORT<2>|    1.360(R)|   -0.792(R)|CLK_BUFGP         |   0.000|
+IO_INPUT_PORT<3>|    1.110(R)|   -0.562(R)|CLK_BUFGP         |   0.000|
+IO_INPUT_PORT<4>|    0.748(R)|   -0.180(R)|CLK_BUFGP         |   0.000|
+IO_INPUT_PORT<5>|    0.958(R)|   -0.410(R)|CLK_BUFGP         |   0.000|
+IO_INPUT_PORT<6>|    0.974(R)|   -0.406(R)|CLK_BUFGP         |   0.000|
+IO_INPUT_PORT<7>|    0.726(R)|   -0.178(R)|CLK_BUFGP         |   0.000|
+RST             |   17.247(R)|   -0.312(R)|CLK_BUFGP         |   0.000|
+                |   11.553(F)|   -1.673(F)|CLK_BUFGP         |   0.000|
+----------------+------------+------------+------------------+--------+
+
+Clock CLK to Pad
+-----------------+------------+------------------+--------+
+                 | clk (edge) |                  | Clock  |
+Destination      |   to PAD   |Internal Clock(s) | Phase  |
+-----------------+------------+------------------+--------+
+EX_ALU_MODE<0>   |   11.065(R)|CLK_BUFGP         |   0.000|
+EX_ALU_MODE<1>   |   12.353(R)|CLK_BUFGP         |   0.000|
+EX_ALU_MODE<2>   |   10.484(R)|CLK_BUFGP         |   0.000|
+EX_ALU_RESULT<0> |   16.634(R)|CLK_BUFGP         |   0.000|
+EX_ALU_RESULT<1> |   19.417(R)|CLK_BUFGP         |   0.000|
+EX_ALU_RESULT<2> |   18.626(R)|CLK_BUFGP         |   0.000|
+EX_ALU_RESULT<3> |   19.221(R)|CLK_BUFGP         |   0.000|
+EX_ALU_RESULT<4> |   19.702(R)|CLK_BUFGP         |   0.000|
+EX_ALU_RESULT<5> |   20.402(R)|CLK_BUFGP         |   0.000|
+EX_ALU_RESULT<6> |   20.337(R)|CLK_BUFGP         |   0.000|
+EX_ALU_RESULT<7> |   19.333(R)|CLK_BUFGP         |   0.000|
+EX_DATA_1<0>     |   11.707(R)|CLK_BUFGP         |   0.000|
+EX_DATA_1<1>     |   11.283(R)|CLK_BUFGP         |   0.000|
+EX_DATA_1<2>     |   10.733(R)|CLK_BUFGP         |   0.000|
+EX_DATA_1<3>     |   10.423(R)|CLK_BUFGP         |   0.000|
+EX_DATA_1<4>     |   11.315(R)|CLK_BUFGP         |   0.000|
+EX_DATA_1<5>     |   11.820(R)|CLK_BUFGP         |   0.000|
+EX_DATA_1<6>     |   10.442(R)|CLK_BUFGP         |   0.000|
+EX_DATA_1<7>     |   10.213(R)|CLK_BUFGP         |   0.000|
+EX_DATA_2<0>     |   11.470(R)|CLK_BUFGP         |   0.000|
+EX_DATA_2<1>     |   10.402(R)|CLK_BUFGP         |   0.000|
+EX_DATA_2<2>     |   10.531(R)|CLK_BUFGP         |   0.000|
+EX_DATA_2<3>     |   10.531(R)|CLK_BUFGP         |   0.000|
+EX_DATA_2<4>     |   10.475(R)|CLK_BUFGP         |   0.000|
+EX_DATA_2<5>     |   10.871(R)|CLK_BUFGP         |   0.000|
+EX_DATA_2<6>     |   10.769(R)|CLK_BUFGP         |   0.000|
+EX_DATA_2<7>     |   11.494(R)|CLK_BUFGP         |   0.000|
+EX_MEM_ADDR<0>   |    8.401(R)|CLK_BUFGP         |   0.000|
+EX_MEM_ADDR<1>   |    8.375(R)|CLK_BUFGP         |   0.000|
+EX_MEM_ADDR<2>   |   10.566(R)|CLK_BUFGP         |   0.000|
+EX_MEM_ADDR<3>   |   12.112(R)|CLK_BUFGP         |   0.000|
+EX_MEM_ADDR<4>   |   10.506(R)|CLK_BUFGP         |   0.000|
+EX_MEM_ADDR<5>   |   10.524(R)|CLK_BUFGP         |   0.000|
+EX_MEM_ADDR<6>   |   10.884(R)|CLK_BUFGP         |   0.000|
+EX_MEM_ADDR<7>   |   10.214(R)|CLK_BUFGP         |   0.000|
+EX_MEM_RD_DATA<0>|   20.585(R)|CLK_BUFGP         |   0.000|
+                 |   17.952(F)|CLK_BUFGP         |   0.000|
+EX_MEM_RD_DATA<1>|   21.053(R)|CLK_BUFGP         |   0.000|
+                 |   17.660(F)|CLK_BUFGP         |   0.000|
+EX_MEM_RD_DATA<2>|   21.241(R)|CLK_BUFGP         |   0.000|
+                 |   18.509(F)|CLK_BUFGP         |   0.000|
+EX_MEM_RD_DATA<3>|   21.436(R)|CLK_BUFGP         |   0.000|
+                 |   17.986(F)|CLK_BUFGP         |   0.000|
+EX_MEM_RD_DATA<4>|   19.890(R)|CLK_BUFGP         |   0.000|
+                 |   16.741(F)|CLK_BUFGP         |   0.000|
+EX_MEM_RD_DATA<5>|   20.929(R)|CLK_BUFGP         |   0.000|
+                 |   18.189(F)|CLK_BUFGP         |   0.000|
+EX_MEM_RD_DATA<6>|   21.104(R)|CLK_BUFGP         |   0.000|
+                 |   17.684(F)|CLK_BUFGP         |   0.000|
+EX_MEM_RD_DATA<7>|   22.124(R)|CLK_BUFGP         |   0.000|
+                 |   18.556(F)|CLK_BUFGP         |   0.000|
+EX_MEM_WR_EN     |    9.849(R)|CLK_BUFGP         |   0.000|
+EX_RESULT<0>     |   21.232(R)|CLK_BUFGP         |   0.000|
+                 |   18.599(F)|CLK_BUFGP         |   0.000|
+EX_RESULT<1>     |   23.046(R)|CLK_BUFGP         |   0.000|
+                 |   19.653(F)|CLK_BUFGP         |   0.000|
+EX_RESULT<2>     |   22.903(R)|CLK_BUFGP         |   0.000|
+                 |   20.171(F)|CLK_BUFGP         |   0.000|
+EX_RESULT<3>     |   22.774(R)|CLK_BUFGP         |   0.000|
+                 |   19.324(F)|CLK_BUFGP         |   0.000|
+EX_RESULT<4>     |   23.961(R)|CLK_BUFGP         |   0.000|
+                 |   20.812(F)|CLK_BUFGP         |   0.000|
+EX_RESULT<5>     |   23.649(R)|CLK_BUFGP         |   0.000|
+                 |   20.909(F)|CLK_BUFGP         |   0.000|
+EX_RESULT<6>     |   23.728(R)|CLK_BUFGP         |   0.000|
+                 |   20.308(F)|CLK_BUFGP         |   0.000|
+EX_RESULT<7>     |   24.082(R)|CLK_BUFGP         |   0.000|
+                 |   20.514(F)|CLK_BUFGP         |   0.000|
+EX_USE_MEM       |   10.877(R)|CLK_BUFGP         |   0.000|
+ID_OPCODE<0>     |    9.836(R)|CLK_BUFGP         |   0.000|
+ID_OPCODE<1>     |   10.071(R)|CLK_BUFGP         |   0.000|
+ID_OPCODE<2>     |   11.937(R)|CLK_BUFGP         |   0.000|
+ID_OPCODE<3>     |   11.268(R)|CLK_BUFGP         |   0.000|
+ID_RA<0>         |    9.718(R)|CLK_BUFGP         |   0.000|
+ID_RA<1>         |    9.599(R)|CLK_BUFGP         |   0.000|
+ID_REG_RD_1<0>   |   12.754(R)|CLK_BUFGP         |   0.000|
+                 |   10.645(F)|CLK_BUFGP         |   0.000|
+ID_REG_RD_1<1>   |   13.588(R)|CLK_BUFGP         |   0.000|
+                 |   11.297(F)|CLK_BUFGP         |   0.000|
+ID_REG_RD_1<2>   |   13.338(R)|CLK_BUFGP         |   0.000|
+                 |   11.527(F)|CLK_BUFGP         |   0.000|
+ID_REG_RD_1<3>   |   13.568(R)|CLK_BUFGP         |   0.000|
+                 |   11.636(F)|CLK_BUFGP         |   0.000|
+ID_REG_RD_1<4>   |   13.465(R)|CLK_BUFGP         |   0.000|
+                 |   11.612(F)|CLK_BUFGP         |   0.000|
+ID_REG_RD_1<5>   |   13.871(R)|CLK_BUFGP         |   0.000|
+                 |   11.598(F)|CLK_BUFGP         |   0.000|
+ID_REG_RD_1<6>   |   12.987(R)|CLK_BUFGP         |   0.000|
+                 |   11.912(F)|CLK_BUFGP         |   0.000|
+ID_REG_RD_1<7>   |   13.772(R)|CLK_BUFGP         |   0.000|
+                 |   11.590(F)|CLK_BUFGP         |   0.000|
+ID_REG_RD_2<0>   |   13.065(R)|CLK_BUFGP         |   0.000|
+                 |   11.198(F)|CLK_BUFGP         |   0.000|
+ID_REG_RD_2<1>   |   14.254(R)|CLK_BUFGP         |   0.000|
+                 |   12.624(F)|CLK_BUFGP         |   0.000|
+ID_REG_RD_2<2>   |   13.170(R)|CLK_BUFGP         |   0.000|
+                 |   11.504(F)|CLK_BUFGP         |   0.000|
+ID_REG_RD_2<3>   |   13.284(R)|CLK_BUFGP         |   0.000|
+                 |   11.353(F)|CLK_BUFGP         |   0.000|
+ID_REG_RD_2<4>   |   13.137(R)|CLK_BUFGP         |   0.000|
+                 |   11.147(F)|CLK_BUFGP         |   0.000|
+ID_REG_RD_2<5>   |   13.015(R)|CLK_BUFGP         |   0.000|
+                 |   11.437(F)|CLK_BUFGP         |   0.000|
+ID_REG_RD_2<6>   |   12.067(R)|CLK_BUFGP         |   0.000|
+                 |   10.723(F)|CLK_BUFGP         |   0.000|
+ID_REG_RD_2<7>   |   11.907(R)|CLK_BUFGP         |   0.000|
+                 |   10.159(F)|CLK_BUFGP         |   0.000|
+IF_INSTR2<0>     |   16.073(R)|CLK_BUFGP         |   0.000|
+IF_INSTR2<1>     |   14.223(R)|CLK_BUFGP         |   0.000|
+IF_INSTR2<2>     |   14.177(R)|CLK_BUFGP         |   0.000|
+IF_INSTR2<3>     |   15.019(R)|CLK_BUFGP         |   0.000|
+IF_INSTR2<4>     |   16.059(R)|CLK_BUFGP         |   0.000|
+IF_INSTR2<5>     |   15.461(R)|CLK_BUFGP         |   0.000|
+IF_INSTR2<6>     |   15.817(R)|CLK_BUFGP         |   0.000|
+IF_INSTR2<7>     |   16.734(R)|CLK_BUFGP         |   0.000|
+IF_INSTR<0>      |   17.184(R)|CLK_BUFGP         |   0.000|
+IF_INSTR<1>      |   16.174(R)|CLK_BUFGP         |   0.000|
+IF_INSTR<2>      |   17.131(R)|CLK_BUFGP         |   0.000|
+IF_INSTR<3>      |   17.794(R)|CLK_BUFGP         |   0.000|
+IF_INSTR<4>      |   15.924(R)|CLK_BUFGP         |   0.000|
+IF_INSTR<5>      |   16.812(R)|CLK_BUFGP         |   0.000|
+IF_INSTR<6>      |   16.914(R)|CLK_BUFGP         |   0.000|
+IF_INSTR<7>      |   16.970(R)|CLK_BUFGP         |   0.000|
+IO_OUTPUT_PORT<0>|   10.517(R)|CLK_BUFGP         |   0.000|
+IO_OUTPUT_PORT<1>|   12.370(R)|CLK_BUFGP         |   0.000|
+IO_OUTPUT_PORT<2>|   11.050(R)|CLK_BUFGP         |   0.000|
+IO_OUTPUT_PORT<3>|   10.998(R)|CLK_BUFGP         |   0.000|
+IO_OUTPUT_PORT<4>|   12.072(R)|CLK_BUFGP         |   0.000|
+IO_OUTPUT_PORT<5>|   13.120(R)|CLK_BUFGP         |   0.000|
+IO_OUTPUT_PORT<6>|   10.986(R)|CLK_BUFGP         |   0.000|
+IO_OUTPUT_PORT<7>|   11.054(R)|CLK_BUFGP         |   0.000|
+PC_BR            |   10.831(R)|CLK_BUFGP         |   0.000|
+PC_DIS           |    9.046(F)|CLK_BUFGP         |   0.000|
+PC_EN            |    9.687(R)|CLK_BUFGP         |   0.000|
+PC_LR_GOTO       |    9.591(R)|CLK_BUFGP         |   0.000|
+PC_LR_RTRN       |   10.321(F)|CLK_BUFGP         |   0.000|
+PC_OUT<0>        |   10.789(R)|CLK_BUFGP         |   0.000|
+PC_OUT<1>        |   10.862(R)|CLK_BUFGP         |   0.000|
+PC_OUT<2>        |   11.280(R)|CLK_BUFGP         |   0.000|
+PC_OUT<3>        |   10.400(R)|CLK_BUFGP         |   0.000|
+PC_OUT<4>        |   10.697(R)|CLK_BUFGP         |   0.000|
+PC_OUT<5>        |   10.174(R)|CLK_BUFGP         |   0.000|
+PC_OUT<6>        |   10.195(R)|CLK_BUFGP         |   0.000|
+PC_OUT<7>        |    8.950(R)|CLK_BUFGP         |   0.000|
+WB_DATA<0>       |   10.732(R)|CLK_BUFGP         |   0.000|
+WB_DATA<1>       |   10.442(R)|CLK_BUFGP         |   0.000|
+WB_DATA<2>       |   11.057(R)|CLK_BUFGP         |   0.000|
+WB_DATA<3>       |   11.242(R)|CLK_BUFGP         |   0.000|
+WB_DATA<4>       |   10.916(R)|CLK_BUFGP         |   0.000|
+WB_DATA<5>       |   11.235(R)|CLK_BUFGP         |   0.000|
+WB_DATA<6>       |   11.267(R)|CLK_BUFGP         |   0.000|
+WB_DATA<7>       |   10.973(R)|CLK_BUFGP         |   0.000|
+WB_EN            |   10.959(R)|CLK_BUFGP         |   0.000|
+WB_REG<0>        |   10.599(R)|CLK_BUFGP         |   0.000|
+WB_REG<1>        |   10.962(R)|CLK_BUFGP         |   0.000|
+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock CLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |   19.367|   12.098|   12.051|    6.426|
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+----------------+---------+
+Source Pad     |Destination Pad |  Delay  |
+---------------+----------------+---------+
+RST            |EX_ALU_RESULT<0>|   17.417|
+RST            |EX_ALU_RESULT<1>|   16.255|
+RST            |EX_ALU_RESULT<2>|   16.506|
+RST            |EX_ALU_RESULT<3>|   16.671|
+RST            |EX_ALU_RESULT<4>|   17.415|
+RST            |EX_ALU_RESULT<5>|   17.776|
+RST            |EX_ALU_RESULT<6>|   18.034|
+RST            |EX_ALU_RESULT<7>|   18.343|
+RST            |EX_RESULT<0>    |   19.571|
+RST            |EX_RESULT<1>    |   19.202|
+RST            |EX_RESULT<2>    |   20.162|
+RST            |EX_RESULT<3>    |   19.498|
+RST            |EX_RESULT<4>    |   20.912|
+RST            |EX_RESULT<5>    |   20.700|
+RST            |EX_RESULT<6>    |   20.906|
+RST            |EX_RESULT<7>    |   21.530|
+---------------+----------------+---------+
+
+
+Analysis completed Fri Mar 21 14:26:46 2014 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 113 MB
+
+
+

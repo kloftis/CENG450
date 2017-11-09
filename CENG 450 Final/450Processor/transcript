@@ -1,0 +1,203 @@
+# Reading C:/Modeltech_xe_starter_VHDL/tcl/vsim/pref.tcl 
+# do {Proc_TB.tdo} 
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim XE III vcom 6.4b Compiler 2008.11 Nov 15 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package vital_timing
+# -- Loading package vcomponents
+# -- Loading package vital_primitives
+# -- Loading package textio
+# -- Loading package vpackage
+# -- Compiling entity processor
+# -- Compiling architecture structure of processor
+# Model Technology ModelSim XE III vcom 6.4b Compiler 2008.11 Nov 15 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package vcomponents
+# -- Loading package numeric_std
+# -- Loading package textio
+# -- Loading package std_logic_textio
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity proc_tb
+# -- Compiling architecture testbench_arch of proc_tb
+# vsim -lib work -sdfmax /UUT=netgen/par/Processor_timesim.sdf -t 1ps Proc_TB 
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading unisim.vcomponents
+# Loading ieee.numeric_std(body)
+# Loading std.textio(body)
+# Loading ieee.std_logic_textio(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.proc_tb(testbench_arch)
+# Loading vital2000.vital_timing(body)
+# Loading simprim.vcomponents
+# Loading vital2000.vital_primitives(body)
+# Loading simprim.vpackage(body)
+# Loading work.processor(structure)
+# Loading simprim.x_obuf(x_obuf_v)
+# Loading simprim.x_buf(x_buf_v)
+# Loading simprim.x_obuft(x_obuft_v)
+# Loading simprim.x_mux2(x_mux2_v)
+# Loading simprim.x_lut4(x_lut4_v)
+# Loading simprim.x_ff(x_ff_v)
+# Loading simprim.x_inv(x_inv_v)
+# Loading simprim.x_sff(x_sff_v)
+# Loading simprim.x_one(x_one_v)
+# Loading simprim.x_xor2(x_xor2_v)
+# Loading simprim.x_zero(x_zero_v)
+# Loading simprim.x_latche(x_latche_v)
+# Loading simprim.x_ckbuf(x_ckbuf_v)
+# Loading simprim.x_roc(x_roc_v)
+# Loading simprim.x_toc(x_toc_v)
+# Loading instances from netgen/par/Processor_timesim.sdf
+# Loading timing data from netgen/par/Processor_timesim.sdf
+# ** Warning: Design size of 169832 statements or 0 non-Xilinx leaf instances exceeds ModelSim XE-Starter recommended capacity.
+# Expect performance to be quite adversely affected.
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: kloftis  Hostname: WS06-04  ProcessID: 5016
+#           Attempting to use alternate WLF file "./wlfte799zg".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlfte799zg
+# ** Note: ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlfte799zg
+# SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Region: /proc_tb  File: PROC_TB.vhw
+# .main_pane.mdi.interior.cs.vm.paneset.cli_0.wf.clip.cs.pw.wf
+# .main_pane.workspace.interior.cs.nb.canvas.notebook.cs.page2.cs
+# .main_pane.signals.interior.cs
+# ** Warning: /X_SFF SETUP  Low VIOLATION ON I WITH RESPECT TO CLK;
+#   Expected := 0.478 ns; Observed := 0.115 ns; At : 1.804 ns
+#    Time: 1804 ps  Iteration: 3  Instance: /proc_tb/uut/xlxi_21_mem_file_106_2
+# ** Warning: /X_SFF SETUP  Low VIOLATION ON I WITH RESPECT TO CLK;
+#   Expected := 0.478 ns; Observed := 0.136 ns; At : 1.815 ns
+#    Time: 1815 ps  Iteration: 3  Instance: /proc_tb/uut/xlxi_21_mem_file_253_3
+# ** Warning: /X_SFF SETUP  Low VIOLATION ON I WITH RESPECT TO CLK;
+#   Expected := 0.478 ns; Observed := 0.183 ns; At : 1.826 ns
+#    Time: 1826 ps  Iteration: 3  Instance: /proc_tb/uut/xlxi_21_mem_file_233_3
+# ** Warning: /X_SFF SETUP  Low VIOLATION ON I WITH RESPECT TO CLK;
+#   Expected := 0.478 ns; Observed := 0.123 ns; At : 1.826 ns
+#    Time: 1826 ps  Iteration: 3  Instance: /proc_tb/uut/xlxi_21_mem_file_105_2
+# ** Warning: /X_SFF SETUP  Low VIOLATION ON I WITH RESPECT TO CLK;
+#   Expected := 0.478 ns; Observed := 0.072 ns; At : 1.827 ns
+#    Time: 1827 ps  Iteration: 3  Instance: /proc_tb/uut/xlxi_11_reg_file_1_7
+# ** Warning: /X_SFF SETUP  Low VIOLATION ON I WITH RESPECT TO CLK;
+#   Expected := 0.478 ns; Observed := 0.048 ns; At : 1.827 ns
+#    Time: 1827 ps  Iteration: 3  Instance: /proc_tb/uut/xlxi_21_mem_file_223_0
+# ** Warning: /X_SFF SETUP  Low VIOLATION ON I WITH RESPECT TO CLK;
+#   Expected := 0.478 ns; Observed := 0.419 ns; At : 1.83 ns
+#    Time: 1830 ps  Iteration: 3  Instance: /proc_tb/uut/xlxi_21_mem_file_198_5
+# ** Warning: /X_SFF SETUP  Low VIOLATION ON I WITH RESPECT TO CLK;
+#   Expected := 0.478 ns; Observed := 0.012 ns; At : 1.83 ns
+#    Time: 1830 ps  Iteration: 3  Instance: /proc_tb/uut/xlxi_21_mem_file_73_2
+# ** Warning: /X_SFF SETUP  Low VIOLATION ON I WITH RESPECT TO CLK;
+#   Expected := 0.478 ns; Observed := 0.211 ns; At : 1.834 ns
+#    Time: 1834 ps  Iteration: 3  Instance: /proc_tb/uut/xlxi_21_mem_file_109_2
+# ** Warning: /X_SFF SETUP  Low VIOLATION ON I WITH RESPECT TO CLK;
+#   Expected := 0.478 ns; Observed := 0.117 ns; At : 1.834 ns
+#    Time: 1834 ps  Iteration: 3  Instance: /proc_tb/uut/xlxi_21_mem_file_107_2
+# ** Warning: /X_SFF SETUP  Low VIOLATION ON I WITH RESPECT TO CLK;
+#   Expected := 0.478 ns; Observed := 0.135 ns; At : 1.834 ns
+#    Time: 1834 ps  Iteration: 3  Instance: /proc_tb/uut/xlxi_21_mem_file_110_2
+# ** Warning: /X_SFF SETUP  Low VIOLATION ON I WITH RESPECT TO CLK;
+#   Expected := 0.478 ns; Observed := 0.022 ns; At : 1.835 ns
+#    Time: 1835 ps  Iteration: 3  Instance: /proc_tb/uut/xlxi_21_mem_file_248_5
+# ** Warning: /X_SFF SETUP  Low VIOLATION ON I WITH RESPECT TO CLK;
+#   Expected := 0.478 ns; Observed := 0.346 ns; At : 1.837 ns
+#    Time: 1837 ps  Iteration: 3  Instance: /proc_tb/uut/xlxi_21_mem_file_218_0
+# ** Warning: /X_SFF SETUP  Low VIOLATION ON I WITH RESPECT TO CLK;
+#   Expected := 0.478 ns; Observed := 0.227 ns; At : 1.837 ns
+#    Time: 1837 ps  Iteration: 3  Instance: /proc_tb/uut/xlxi_21_mem_file_108_2
+# ** Warning: /X_SFF SETUP  Low VIOLATION ON I WITH RESPECT TO CLK;
+#   Expected := 0.478 ns; Observed := 0.214 ns; At : 1.837 ns
+#    Time: 1837 ps  Iteration: 3  Instance: /proc_tb/uut/xlxi_21_mem_file_104_2
+# ** Warning: /X_SFF SETUP  Low VIOLATION ON I WITH RESPECT TO CLK;
+#   Expected := 0.478 ns; Observed := 0.104 ns; At : 1.839 ns
+#    Time: 1839 ps  Iteration: 3  Instance: /proc_tb/uut/xlxi_21_mem_file_238_3
+# ** Warning: /X_SFF SETUP  Low VIOLATION ON I WITH RESPECT TO CLK;
+#   Expected := 0.478 ns; Observed := 0.477 ns; At : 1.839 ns
+#    Time: 1839 ps  Iteration: 3  Instance: /proc_tb/uut/xlxi_21_mem_file_236_3
+# ** Warning: /X_SFF SETUP  Low VIOLATION ON I WITH RESPECT TO CLK;
+#   Expected := 0.478 ns; Observed := 0.245 ns; At : 1.839 ns
+#    Time: 1839 ps  Iteration: 3  Instance: /proc_tb/uut/xlxi_21_mem_file_242_3
+# ** Warning: /X_SFF SETUP  Low VIOLATION ON I WITH RESPECT TO CLK;
+#   Expected := 0.478 ns; Observed := 0.129 ns; At : 1.841 ns
+#    Time: 1841 ps  Iteration: 3  Instance: /proc_tb/uut/xlxi_21_mem_file_17_1
+# ** Warning: /X_SFF SETUP  Low VIOLATION ON I WITH RESPECT TO CLK;
+#   Expected := 0.478 ns; Observed := 0.263 ns; At : 1.842 ns
+#    Time: 1842 ps  Iteration: 3  Instance: /proc_tb/uut/xlxi_21_mem_file_207_2
+# ** Warning: /X_SFF SETUP  Low VIOLATION ON I WITH RESPECT TO CLK;
+#   Expected := 0.478 ns; Observed := 0.278 ns; At : 1.842 ns
+#    Time: 1842 ps  Iteration: 3  Instance: /proc_tb/uut/xlxi_21_mem_file_221_2
+# ** Warning: /X_SFF SETUP  Low VIOLATION ON I WITH RESPECT TO CLK;
+#   Expected := 0.478 ns; Observed := 0.082 ns; At : 1.842 ns
+#    Time: 1842 ps  Iteration: 3  Instance: /proc_tb/uut/xlxi_21_mem_file_201_2
+# ** Warning: /X_SFF SETUP  Low VIOLATION ON I WITH RESPECT TO CLK;
+#   Expected := 0.478 ns; Observed := 0.399 ns; At : 1.842 ns
+#    Time: 1842 ps  Iteration: 3  Instance: /proc_tb/uut/xlxi_21_mem_file_201_3
+# ** Warning: /X_SFF SETUP  Low VIOLATION ON I WITH RESPECT TO CLK;
+#   Expected := 0.478 ns; Observed := 0.066 ns; At : 1.842 ns
+#    Time: 1842 ps  Iteration: 3  Instance: /proc_tb/uut/xlxi_21_mem_file_202_2
+# ** Warning: /X_SFF SETUP  Low VIOLATION ON I WITH RESPECT TO CLK;
+#   Expected := 0.478 ns; Observed := 0.095 ns; At : 1.844 ns
+#    Time: 1844 ps  Iteration: 3  Instance: /proc_tb/uut/xlxi_11_reg_file_2_4
+# ** Warning: /X_SFF SETUP  Low VIOLATION ON I WITH RESPECT TO CLK;
+#   Expected := 0.478 ns; Observed := 0.144 ns; At : 1.845 ns
+#    Time: 1845 ps  Iteration: 3  Instance: /proc_tb/uut/xlxi_21_mem_file_206_2
+# ** Warning: /X_SFF SETUP  Low VIOLATION ON I WITH RESPECT TO CLK;
+#   Expected := 0.478 ns; Observed := 0.07 ns; At : 1.845 ns
+#    Time: 1845 ps  Iteration: 3  Instance: /proc_tb/uut/xlxi_21_mem_file_204_2
+# ** Warning: /X_SFF SETUP  Low VIOLATION ON I WITH RESPECT TO CLK;
+#   Expected := 0.478 ns; Observed := 0.03 ns; At : 1.847 ns
+#    Time: 1847 ps  Iteration: 3  Instance: /proc_tb/uut/xlxi_21_mem_file_127_2
+# ** Warning: /X_SFF SETUP  Low VIOLATION ON I WITH RESPECT TO CLK;
+#   Expected := 0.478 ns; Observed := 0.309 ns; At : 1.847 ns
+#    Time: 1847 ps  Iteration: 3  Instance: /proc_tb/uut/xlxi_21_mem_file_126_3
+# ** Warning: /X_SFF SETUP  Low VIOLATION ON I WITH RESPECT TO CLK;
+#   Expected := 0.478 ns; Observed := 0.303 ns; At : 1.847 ns
+#    Time: 1847 ps  Iteration: 3  Instance: /proc_tb/uut/xlxi_21_mem_file_205_2
+# ** Warning: /X_SFF SETUP  Low VIOLATION ON I WITH RESPECT TO CLK;
+#   Expected := 0.478 ns; Observed := 0.242 ns; At : 1.847 ns
+#    Time: 1847 ps  Iteration: 3  Instance: /proc_tb/uut/xlxi_21_mem_file_200_2
+# ** Warning: /X_SFF SETUP  Low VIOLATION ON I WITH RESPECT TO CLK;
+#   Expected := 0.478 ns; Observed := 0.376 ns; At : 1.847 ns
+#    Time: 1847 ps  Iteration: 3  Instance: /proc_tb/uut/xlxi_21_mem_file_200_3
+# ** Warning: /X_SFF SETUP  Low VIOLATION ON I WITH RESPECT TO CLK;
+#   Expected := 0.478 ns; Observed := 0.096 ns; At : 1.848 ns
+#    Time: 1848 ps  Iteration: 3  Instance: /proc_tb/uut/xlxi_21_mem_file_220_3
+# ** Warning: /X_SFF SETUP  Low VIOLATION ON I WITH RESPECT TO CLK;
+#   Expected := 0.478 ns; Observed := 0.069 ns; At : 1.85 ns
+#    Time: 1850 ps  Iteration: 3  Instance: /proc_tb/uut/xlxi_21_mem_file_222_2
+# ** Warning: /X_SFF SETUP  Low VIOLATION ON I WITH RESPECT TO CLK;
+#   Expected := 0.478 ns; Observed := 0.025 ns; At : 1.852 ns
+#    Time: 1852 ps  Iteration: 3  Instance: /proc_tb/uut/xlxi_21_mem_file_126_1
+# ** Warning: /X_SFF SETUP  Low VIOLATION ON I WITH RESPECT TO CLK;
+#   Expected := 0.478 ns; Observed := 0.007 ns; At : 1.853 ns
+#    Time: 1853 ps  Iteration: 3  Instance: /proc_tb/uut/xlxi_21_mem_file_197_3
+# ** Warning: /X_SFF SETUP  Low VIOLATION ON I WITH RESPECT TO CLK;
+#   Expected := 0.478 ns; Observed := 0.225 ns; At : 1.853 ns
+#    Time: 1853 ps  Iteration: 3  Instance: /proc_tb/uut/xlxi_21_mem_file_196_3
+# ** Warning: /X_SFF SETUP  Low VIOLATION ON I WITH RESPECT TO CLK;
+#   Expected := 0.478 ns; Observed := 0.211 ns; At : 1.853 ns
+#    Time: 1853 ps  Iteration: 3  Instance: /proc_tb/uut/xlxi_21_mem_file_127_1
+# ** Warning: /X_SFF SETUP  Low VIOLATION ON I WITH RESPECT TO CLK;
+#   Expected := 0.478 ns; Observed := 0.128 ns; At : 1.855 ns
+#    Time: 1855 ps  Iteration: 3  Instance: /proc_tb/uut/xlxi_21_mem_file_198_6
+# ** Warning: /X_SFF SETUP  Low VIOLATION ON I WITH RESPECT TO CLK;
+#   Expected := 0.478 ns; Observed := 0.104 ns; At : 1.855 ns
+#    Time: 1855 ps  Iteration: 3  Instance: /proc_tb/uut/xlxi_21_mem_file_219_0
+# ** Warning: /X_SFF SETUP  Low VIOLATION ON I WITH RESPECT TO CLK;
+#   Expected := 0.478 ns; Observed := 0.005 ns; At : 1.855 ns
+#    Time: 1855 ps  Iteration: 3  Instance: /proc_tb/uut/xlxi_21_mem_file_219_1
+# ** Warning: /X_SFF SETUP  Low VIOLATION ON CE WITH RESPECT TO CLK;
+#   Expected := 0.885 ns; Observed := 0.103 ns; At : 1.856 ns
+#    Time: 1856 ps  Iteration: 3  Instance: /proc_tb/uut/xlxi_21_mem_file_242_0
+# ** Warning: /X_SFF SETUP  Low VIOLATION ON CE WITH RESPECT TO CLK;
+#   Expected := 0.885 ns; Observed := 0.103 ns; At : 1.856 ns
+#    Time: 1856 ps  Iteration: 3  Instance: /proc_tb/uut/xlxi_21_mem_file_242_1
+# Break key hit 
+# Break key hit 
+# Break key hit 
+# Simulation stop requested.

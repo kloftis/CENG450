@@ -1,0 +1,24 @@
+V3 11
+FL "C:/Documents and Settings/kloftis/Desktop/CENG 450 - KL/Count_Mem_VHDL/counter.vhd" 2014/01/28.14:38:04 K.39
+EN work/counter 1390950161 \
+      FL "C:/Documents and Settings/kloftis/Desktop/CENG 450 - KL/Count_Mem_VHDL/counter.vhd" \
+      PB ieee/std_logic_1164 1217055545 PB ieee/STD_LOGIC_UNSIGNED 1217055547 \
+      PB ieee/std_logic_arith 1217055546
+AR work/counter/behv 1390950162 \
+      FL "C:/Documents and Settings/kloftis/Desktop/CENG 450 - KL/Count_Mem_VHDL/counter.vhd" \
+      EN work/counter 1390950161
+FL "C:/Documents and Settings/kloftis/Desktop/CENG 450 - KL/Count_Mem_VHDL/count_mem_vhdl.vhd" 2014/01/28.14:38:13 K.39
+EN work/count_mem 1390950165 \
+      FL "C:/Documents and Settings/kloftis/Desktop/CENG 450 - KL/Count_Mem_VHDL/count_mem_vhdl.vhd" \
+      PB ieee/std_logic_1164 1217055545 PB ieee/std_logic_arith 1217055546 \
+      PB ieee/STD_LOGIC_UNSIGNED 1217055547
+AR work/count_mem/Behavioral 1390950166 \
+      FL "C:/Documents and Settings/kloftis/Desktop/CENG 450 - KL/Count_Mem_VHDL/count_mem_vhdl.vhd" \
+      EN work/count_mem 1390950165 CP counter CP ROM_VHDL
+FL "C:/Documents and Settings/kloftis/Desktop/CENG 450 - KL/Count_Mem_VHDL/ROM_VHDL.vhd" 2014/01/28.14:37:44 K.39
+EN work/ROM_VHDL 1390950163 \
+      FL "C:/Documents and Settings/kloftis/Desktop/CENG 450 - KL/Count_Mem_VHDL/ROM_VHDL.vhd" \
+      PB ieee/std_logic_1164 1217055545 PB ieee/std_logic_arith 1217055546
+AR work/ROM_VHDL/BHV 1390950164 \
+      FL "C:/Documents and Settings/kloftis/Desktop/CENG 450 - KL/Count_Mem_VHDL/ROM_VHDL.vhd" \
+      EN work/ROM_VHDL 1390950163

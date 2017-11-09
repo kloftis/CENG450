@@ -1,0 +1,279 @@
+iMPACT Version: 10.1.03
+
+iMPACT log file Started on Fri Mar 21 12:47:31 2014
+
+// *** BATCH CMD : loadProjectFile -file "C:\Documents andSettings\kloftis\Desktop\CENG 450 Milestone 2\450Processor/450Processor.ipf"
+Connecting to cable (Usb Port - USB21).
+Checking cable driver.
+ Driver file xusb_xlp.sys found.
+ Driver version: src=1029, dest=1029.
+ Driver windrvr6.sys version = 9.0.0.0. WinDriver v9.00 Jungo (c) 1997 - 2007 Build Date: Mar 27 2007 X86 32bit SYS13:58:07, version = 900.
+ Cable PID = 0008.
+ Max current requested during enumeration is 74 mA.
+Type = 0x0004.
+ Cable Type = 3, Revision = 0.
+ Setting cable speed to 6 MHz.
+Cable connection established.
+Firmware version = 1303.
+File version of C:/Xilinx/10.1/ISE/data/xusb_xlp.hex = 1303.
+Firmware hex file version = 1303.
+PLD file version = 0012h.
+ PLD version = 0012h.
+'1': Loading file 'C:/Documents and Settings/kloftis/Desktop/CENG 450 Milestone2/450Processor/processor.bit' ...
+done.
+INFO:iMPACT:1777 - 
+   Reading C:/Xilinx/10.1/ISE/spartan2/data/xc2s200.bsd...
+INFO:iMPACT:501 - '1': Added Device xc2s200 successfully.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+Active mode is BS
+// *** BATCH CMD : setMode -ss
+// *** BATCH CMD : setMode -sm
+// *** BATCH CMD : setMode -hw140
+// *** BATCH CMD : setMode -spi
+// *** BATCH CMD : setMode -acecf
+// *** BATCH CMD : setMode -acempm
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : Program -p 1 
+Maximum TCK operating frequency for this device chain: 33000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Programming device...
+PROGRESS_START - Starting Operation.
+done.
+INFO:iMPACT:579 - '1': Completed downloading bit file to device.
+PROGRESS_END - End Operation.
+Elapsed time =      1 sec.
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : deleteDevice -position 1
+// *** BATCH CMD : loadProjectFile -file "C:\Documents andSettings\kloftis\Desktop\CENG 450 Milestone 2\450Processor/450Processor.ipf"
+Connecting to cable (Usb Port - USB21).
+Checking cable driver.
+ Driver file xusb_xlp.sys found.
+ Driver version: src=1029, dest=1029.
+ Driver windrvr6.sys version = 9.0.0.0. WinDriver v9.00 Jungo (c) 1997 - 2007 Build Date: Mar 27 2007 X86 32bit SYS13:58:07, version = 900.
+ Cable PID = 0008.
+ Max current requested during enumeration is 74 mA.
+Type = 0x0004.
+ Cable Type = 3, Revision = 0.
+ Setting cable speed to 6 MHz.
+Cable connection established.
+Firmware version = 1303.
+File version of C:/Xilinx/10.1/ISE/data/xusb_xlp.hex = 1303.
+Firmware hex file version = 1303.
+PLD file version = 0012h.
+ PLD version = 0012h.
+'1': Loading file 'C:/Documents and Settings/kloftis/Desktop/CENG 450 Milestone2/450Processor/processor.bit' ...
+done.
+INFO:iMPACT:1777 - 
+   Reading C:/Xilinx/10.1/ISE/spartan2/data/xc2s200.bsd...
+INFO:iMPACT:501 - '1': Added Device xc2s200 successfully.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+Active mode is BS
+// *** BATCH CMD : setMode -ss
+// *** BATCH CMD : setMode -sm
+// *** BATCH CMD : setMode -hw140
+// *** BATCH CMD : setMode -spi
+// *** BATCH CMD : setMode -acecf
+// *** BATCH CMD : setMode -acempm
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : Program -p 1 
+Maximum TCK operating frequency for this device chain: 33000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Programming device...
+PROGRESS_START - Starting Operation.
+done.
+INFO:iMPACT:579 - '1': Completed downloading bit file to device.
+PROGRESS_END - End Operation.
+Elapsed time =      1 sec.
+// *** BATCH CMD : Program -p 1 
+Maximum TCK operating frequency for this device chain: 33000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Programming device...
+PROGRESS_START - Starting Operation.
+done.
+INFO:iMPACT:579 - '1': Completed downloading bit file to device.
+PROGRESS_END - End Operation.
+Elapsed time =      0 sec.
+ERROR:HDLParsers:3562 - pepExtractor.prj line 1  Expecting 'vhdl' or 'verilog'   keyword,  found 'work'.
+Compiling vhdl file "C:/Documents and Settings/kloftis/Desktop/CENG 450Milestone 2/450Processor/ALU.vhd" in Library work.
+Entity <ALU> compiled.
+Entity <ALU> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Documents and Settings/kloftis/Desktop/CENG 450Milestone 2/450Processor/ID_EX_Buffer.vhd" in Library work.
+Entity <ID_EX_Buffer> compiled.
+Entity <ID_EX_Buffer> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Documents and Settings/kloftis/Desktop/CENG 450Milestone 2/450Processor/Register.vhd" in Library work.
+Entity <register_file> compiled.
+Entity <register_file> (Architecture <behavioural>) compiled.
+Compiling vhdl file "C:/Documents and Settings/kloftis/Desktop/CENG 450Milestone 2/450Processor/IF_ID_Buffer.vhd" in Library work.
+Entity <IF_ID_Buffer> compiled.
+Entity <IF_ID_Buffer> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Documents and Settings/kloftis/Desktop/CENG 450Milestone 2/450Processor/EX_MEM_Buffer.vhd" in Library work.
+Entity <EX_MEM_Buffer> compiled.
+Entity <EX_MEM_Buffer> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Documents and Settings/kloftis/Desktop/CENG 450Milestone 2/450Processor/MUX2_8bit.vhd" in Library work.
+Entity <MUX2_8bit> compiled.
+Entity <MUX2_8bit> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Documents and Settings/kloftis/Desktop/CENG 450Milestone 2/450Processor/PC.vhd" in Library work.
+Entity <PC> compiled.
+Entity <PC> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Documents and Settings/kloftis/Desktop/CENG 450Milestone 2/450Processor/../Memory.vhd" in Library work.
+Package <prog_mem> compiled.
+Entity <Memory> compiled.
+Entity <Memory> (Architecture <CFG>) compiled.
+Compiling vhdl file "C:/Documents and Settings/kloftis/Desktop/CENG 450Milestone 2/450Processor/RAM.vhd" in Library work.
+Entity <RAM> compiled.
+Entity <RAM> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Documents and Settings/kloftis/Desktop/CENG 450Milestone 2/450Processor/Processor.vhf" in Library work.
+Entity <Processor> compiled.
+Entity <Processor> (Architecture <BEHAVIORAL>) compiled.
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : deleteDevice -position 1
+// *** BATCH CMD : loadProjectFile -file "C:\Documents andSettings\kloftis\Desktop\CENG 450 Milestone 2\450Processor/450Processor.ipf"
+Connecting to cable (Usb Port - USB21).
+Checking cable driver.
+ Driver file xusb_xlp.sys found.
+ Driver version: src=1029, dest=1029.
+ Driver windrvr6.sys version = 9.0.0.0. WinDriver v9.00 Jungo (c) 1997 - 2007 Build Date: Mar 27 2007 X86 32bit SYS13:58:07, version = 900.
+ Cable PID = 0008.
+ Max current requested during enumeration is 74 mA.
+Type = 0x0004.
+ Cable Type = 3, Revision = 0.
+ Setting cable speed to 6 MHz.
+Cable connection established.
+Firmware version = 1303.
+File version of C:/Xilinx/10.1/ISE/data/xusb_xlp.hex = 1303.
+Firmware hex file version = 1303.
+PLD file version = 0012h.
+ PLD version = 0012h.
+'1': Loading file 'C:/Documents and Settings/kloftis/Desktop/CENG 450 Milestone2/450Processor/processor.bit' ...
+done.
+INFO:iMPACT:1777 - 
+   Reading C:/Xilinx/10.1/ISE/spartan2/data/xc2s200.bsd...
+INFO:iMPACT:501 - '1': Added Device xc2s200 successfully.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+Active mode is BS
+// *** BATCH CMD : setMode -ss
+// *** BATCH CMD : setMode -sm
+// *** BATCH CMD : setMode -hw140
+// *** BATCH CMD : setMode -spi
+// *** BATCH CMD : setMode -acecf
+// *** BATCH CMD : setMode -acempm
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : Program -p 1 
+Maximum TCK operating frequency for this device chain: 33000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Programming device...
+PROGRESS_START - Starting Operation.
+done.
+INFO:iMPACT:579 - '1': Completed downloading bit file to device.
+PROGRESS_END - End Operation.
+Elapsed time =      0 sec.
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : deleteDevice -position 1
+// *** BATCH CMD : loadProjectFile -file "C:\Documents andSettings\kloftis\Desktop\CENG 450 Milestone 2\450Processor/450Processor.ipf"
+Connecting to cable (Usb Port - USB21).
+Checking cable driver.
+ Driver file xusb_xlp.sys found.
+ Driver version: src=1029, dest=1029.
+ Driver windrvr6.sys version = 9.0.0.0. WinDriver v9.00 Jungo (c) 1997 - 2007 Build Date: Mar 27 2007 X86 32bit SYS13:58:07, version = 900.
+ Cable PID = 0008.
+ Max current requested during enumeration is 74 mA.
+Type = 0x0004.
+ Cable Type = 3, Revision = 0.
+ Setting cable speed to 6 MHz.
+Cable connection established.
+Firmware version = 1303.
+File version of C:/Xilinx/10.1/ISE/data/xusb_xlp.hex = 1303.
+Firmware hex file version = 1303.
+PLD file version = 0012h.
+ PLD version = 0012h.
+'1': Loading file 'C:/Documents and Settings/kloftis/Desktop/CENG 450 Milestone2/450Processor/processor.bit' ...
+done.
+INFO:iMPACT:1777 - 
+   Reading C:/Xilinx/10.1/ISE/spartan2/data/xc2s200.bsd...
+INFO:iMPACT:501 - '1': Added Device xc2s200 successfully.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+Active mode is BS
+// *** BATCH CMD : setMode -ss
+// *** BATCH CMD : setMode -sm
+// *** BATCH CMD : setMode -hw140
+// *** BATCH CMD : setMode -spi
+// *** BATCH CMD : setMode -acecf
+// *** BATCH CMD : setMode -acempm
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : Program -p 1 
+Maximum TCK operating frequency for this device chain: 33000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Programming device...
+PROGRESS_START - Starting Operation.
+done.
+INFO:iMPACT:579 - '1': Completed downloading bit file to device.
+PROGRESS_END - End Operation.
+Elapsed time =      1 sec.
+ERROR:HDLParsers:3562 - pepExtractor.prj line 1  Expecting 'vhdl' or 'verilog'   keyword,  found 'work'.
+Compiling vhdl file "C:/Documents and Settings/kloftis/Desktop/CENG 450Milestone 2/450Processor/ALU.vhd" in Library work.
+Entity <ALU> compiled.
+Entity <ALU> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Documents and Settings/kloftis/Desktop/CENG 450Milestone 2/450Processor/ID_EX_Buffer.vhd" in Library work.
+Entity <ID_EX_Buffer> compiled.
+Entity <ID_EX_Buffer> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Documents and Settings/kloftis/Desktop/CENG 450Milestone 2/450Processor/Register.vhd" in Library work.
+Entity <register_file> compiled.
+Entity <register_file> (Architecture <behavioural>) compiled.
+Compiling vhdl file "C:/Documents and Settings/kloftis/Desktop/CENG 450Milestone 2/450Processor/IF_ID_Buffer.vhd" in Library work.
+Entity <IF_ID_Buffer> compiled.
+Entity <IF_ID_Buffer> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Documents and Settings/kloftis/Desktop/CENG 450Milestone 2/450Processor/EX_MEM_Buffer.vhd" in Library work.
+Entity <EX_MEM_Buffer> compiled.
+Entity <EX_MEM_Buffer> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Documents and Settings/kloftis/Desktop/CENG 450Milestone 2/450Processor/MUX2_8bit.vhd" in Library work.
+Entity <MUX2_8bit> compiled.
+Entity <MUX2_8bit> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Documents and Settings/kloftis/Desktop/CENG 450Milestone 2/450Processor/PC.vhd" in Library work.
+Entity <PC> compiled.
+Entity <PC> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Documents and Settings/kloftis/Desktop/CENG 450Milestone 2/450Processor/../Memory.vhd" in Library work.
+Package <prog_mem> compiled.
+Entity <Memory> compiled.
+Entity <Memory> (Architecture <CFG>) compiled.
+Compiling vhdl file "C:/Documents and Settings/kloftis/Desktop/CENG 450Milestone 2/450Processor/RAM.vhd" in Library work.
+Entity <RAM> compiled.
+Entity <RAM> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Documents and Settings/kloftis/Desktop/CENG 450Milestone 2/450Processor/Processor.vhf" in Library work.
+Entity <Processor> compiled.
+Entity <Processor> (Architecture <BEHAVIORAL>) compiled.
+// *** BATCH CMD : saveProjectFile -file "C:/Documents andSettings/kloftis/Desktop/CENG 450 Milestone 2/450Processor/450Processor2.ipf"
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : deleteDevice -position 1
+// *** BATCH CMD : setMode -ss
+// *** BATCH CMD : setMode -sm
+// *** BATCH CMD : setMode -hw140
+// *** BATCH CMD : setMode -spi
+// *** BATCH CMD : setMode -acecf
+// *** BATCH CMD : setMode -acempm
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : setMode -bs

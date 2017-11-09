@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="info" file="MapLib" num="562" delta="unknown" >No environment variables are currently set.
+</msg>
+
+<msg type="info" file="LIT" num="244" delta="unknown" >All of the single ended outputs in this design are using slew rate limited output drivers. The delay on speed critical single ended outputs can be dramatically reduced by designating them as fast outputs.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="1109" delta="unknown" >Blockcheck: Dangling <arg fmt="%s" index="1">BLOCKRAM_BLOCKRAMA</arg> output. Pin <arg fmt="%s" index="2">OUT8</arg> of comp <arg fmt="%s" index="3">u1/Mrom_data_rom0000.A</arg> is not connected.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="1109" delta="unknown" >Blockcheck: Dangling <arg fmt="%s" index="1">BLOCKRAM_BLOCKRAMA</arg> output. Pin <arg fmt="%s" index="2">OUT9</arg> of comp <arg fmt="%s" index="3">u1/Mrom_data_rom0000.A</arg> is not connected.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="1109" delta="unknown" >Blockcheck: Dangling <arg fmt="%s" index="1">BLOCKRAM_BLOCKRAMA</arg> output. Pin <arg fmt="%s" index="2">OUT10</arg> of comp <arg fmt="%s" index="3">u1/Mrom_data_rom0000.A</arg> is not connected.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="1109" delta="unknown" >Blockcheck: Dangling <arg fmt="%s" index="1">BLOCKRAM_BLOCKRAMA</arg> output. Pin <arg fmt="%s" index="2">OUT11</arg> of comp <arg fmt="%s" index="3">u1/Mrom_data_rom0000.A</arg> is not connected.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="1109" delta="unknown" >Blockcheck: Dangling <arg fmt="%s" index="1">BLOCKRAM_BLOCKRAMA</arg> output. Pin <arg fmt="%s" index="2">OUT12</arg> of comp <arg fmt="%s" index="3">u1/Mrom_data_rom0000.A</arg> is not connected.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="1109" delta="unknown" >Blockcheck: Dangling <arg fmt="%s" index="1">BLOCKRAM_BLOCKRAMA</arg> output. Pin <arg fmt="%s" index="2">OUT13</arg> of comp <arg fmt="%s" index="3">u1/Mrom_data_rom0000.A</arg> is not connected.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="1109" delta="unknown" >Blockcheck: Dangling <arg fmt="%s" index="1">BLOCKRAM_BLOCKRAMA</arg> output. Pin <arg fmt="%s" index="2">OUT14</arg> of comp <arg fmt="%s" index="3">u1/Mrom_data_rom0000.A</arg> is not connected.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="1109" delta="unknown" >Blockcheck: Dangling <arg fmt="%s" index="1">BLOCKRAM_BLOCKRAMA</arg> output. Pin <arg fmt="%s" index="2">OUT15</arg> of comp <arg fmt="%s" index="3">u1/Mrom_data_rom0000.A</arg> is not connected.
+</msg>
+
+</messages>
+

@@ -1,0 +1,42 @@
+Running: C:\Xilinx\13.4\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -o M:/CENG 450/CENG 450 Final/450Processor/Processor_isim_beh.exe -prj M:/CENG 450/CENG 450 Final/450Processor/Processor_beh.prj work.Processor 
+ISim O.87xd (signature 0x2f00eba5)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Parsing VHDL file "M:/CENG 450/CENG 450 Final/450Processor/Register.vhd" into library work
+Parsing VHDL file "M:/CENG 450/CENG 450 Final/450Processor/RAM.vhd" into library work
+Parsing VHDL file "M:/CENG 450/CENG 450 Final/450Processor/PC.vhd" into library work
+Parsing VHDL file "M:/CENG 450/CENG 450 Final/450Processor/MUX2_8bit.vhd" into library work
+Parsing VHDL file "M:/CENG 450/CENG 450 Final/450Processor/Memory.vhd" into library work
+Parsing VHDL file "M:/CENG 450/CENG 450 Final/450Processor/IF_ID_Buffer.vhd" into library work
+Parsing VHDL file "M:/CENG 450/CENG 450 Final/450Processor/ID_EX_Buffer.vhd" into library work
+Parsing VHDL file "M:/CENG 450/CENG 450 Final/450Processor/EX_MEM_Buffer.vhd" into library work
+Parsing VHDL file "M:/CENG 450/CENG 450 Final/450Processor/ALU.vhd" into library work
+Parsing VHDL file "M:/CENG 450/CENG 450 Final/450Processor/Processor.vhf" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 109480 KB
+Fuse CPU Usage: 576 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling package vcomponents
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling package prog_mem
+Compiling architecture behavioral of entity ALU [alu_default]
+Compiling architecture behavioral of entity ID_EX_Buffer [id_ex_buffer_default]
+Compiling architecture behavioural of entity register_file [register_file_default]
+Compiling architecture behavioral of entity IF_ID_Buffer [if_id_buffer_default]
+Compiling architecture behavioral of entity EX_MEM_Buffer [ex_mem_buffer_default]
+Compiling architecture behavioral of entity MUX2_8bit [mux2_8bit_default]
+Compiling architecture behavioral of entity PC [pc_default]
+Compiling architecture cfg of entity Memory [memory_default]
+Compiling architecture behavioral of entity RAM [ram_default]
+Compiling architecture behavioral of entity processor
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 26 VHDL Units
+Built simulation executable M:/CENG 450/CENG 450 Final/450Processor/Processor_isim_beh.exe
+Fuse Memory Usage: 152280 KB
+Fuse CPU Usage: 1044 ms

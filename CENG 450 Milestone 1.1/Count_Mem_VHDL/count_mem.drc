@@ -1,0 +1,18 @@
+WARNING:PhysDesignRules:1109 - Blockcheck: Dangling BLOCKRAM_BLOCKRAMA output.
+   Pin OUT8 of comp u1/Mrom_data_rom0000.A is not connected.
+WARNING:PhysDesignRules:1109 - Blockcheck: Dangling BLOCKRAM_BLOCKRAMA output.
+   Pin OUT9 of comp u1/Mrom_data_rom0000.A is not connected.
+WARNING:PhysDesignRules:1109 - Blockcheck: Dangling BLOCKRAM_BLOCKRAMA output.
+   Pin OUT10 of comp u1/Mrom_data_rom0000.A is not connected.
+WARNING:PhysDesignRules:1109 - Blockcheck: Dangling BLOCKRAM_BLOCKRAMA output.
+   Pin OUT11 of comp u1/Mrom_data_rom0000.A is not connected.
+WARNING:PhysDesignRules:1109 - Blockcheck: Dangling BLOCKRAM_BLOCKRAMA output.
+   Pin OUT12 of comp u1/Mrom_data_rom0000.A is not connected.
+WARNING:PhysDesignRules:1109 - Blockcheck: Dangling BLOCKRAM_BLOCKRAMA output.
+   Pin OUT13 of comp u1/Mrom_data_rom0000.A is not connected.
+WARNING:PhysDesignRules:1109 - Blockcheck: Dangling BLOCKRAM_BLOCKRAMA output.
+   Pin OUT14 of comp u1/Mrom_data_rom0000.A is not connected.
+WARNING:PhysDesignRules:1109 - Blockcheck: Dangling BLOCKRAM_BLOCKRAMA output.
+   Pin OUT15 of comp u1/Mrom_data_rom0000.A is not connected.
+DRC detected 0 errors and 8 warnings.  Please see the previously displayed
+individual error or warning messages for more details.

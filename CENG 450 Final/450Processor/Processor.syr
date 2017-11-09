@@ -1,0 +1,682 @@
+Release 13.4 - xst O.87xd (nt)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.31 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.32 secs
+ 
+--> Reading design: Processor.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Processor.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Processor"
+Output Format                      : NGC
+Target Device                      : xc3s1000-4-fg320
+
+---- Source Options
+Top Module Name                    : Processor
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : LUT
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100
+Add Generic Clock Buffer(BUFG)     : 4
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "//samba.engr.uvic.ca/home/kloftis/CENG 450/CENG 450 Final/450Processor/ALU.vhd" in Library work.
+Entity <ALU> compiled.
+Entity <ALU> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "//samba.engr.uvic.ca/home/kloftis/CENG 450/CENG 450 Final/450Processor/ID_EX_Buffer.vhd" in Library work.
+Entity <ID_EX_Buffer> compiled.
+Entity <ID_EX_Buffer> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "//samba.engr.uvic.ca/home/kloftis/CENG 450/CENG 450 Final/450Processor/Register.vhd" in Library work.
+Entity <register_file> compiled.
+Entity <register_file> (Architecture <behavioural>) compiled.
+Compiling vhdl file "//samba.engr.uvic.ca/home/kloftis/CENG 450/CENG 450 Final/450Processor/IF_ID_Buffer.vhd" in Library work.
+Entity <IF_ID_Buffer> compiled.
+Entity <IF_ID_Buffer> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "//samba.engr.uvic.ca/home/kloftis/CENG 450/CENG 450 Final/450Processor/EX_MEM_Buffer.vhd" in Library work.
+Entity <EX_MEM_Buffer> compiled.
+Entity <EX_MEM_Buffer> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "//samba.engr.uvic.ca/home/kloftis/CENG 450/CENG 450 Final/450Processor/MUX2_8bit.vhd" in Library work.
+Entity <MUX2_8bit> compiled.
+Entity <MUX2_8bit> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "//samba.engr.uvic.ca/home/kloftis/CENG 450/CENG 450 Final/450Processor/PC.vhd" in Library work.
+Entity <PC> compiled.
+Entity <PC> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "//samba.engr.uvic.ca/home/kloftis/CENG 450/CENG 450 Final/450Processor/Memory.vhd" in Library work.
+Package <prog_mem> compiled.
+Entity <Memory> compiled.
+Entity <Memory> (Architecture <CFG>) compiled.
+Compiling vhdl file "//samba.engr.uvic.ca/home/kloftis/CENG 450/CENG 450 Final/450Processor/RAM.vhd" in Library work.
+Entity <RAM> compiled.
+Entity <RAM> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "//samba.engr.uvic.ca/home/kloftis/CENG 450/CENG 450 Final/450Processor/Processor.vhf" in Library work.
+Entity <Processor> compiled.
+Entity <Processor> (Architecture <BEHAVIORAL>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <Processor> in library <work> (architecture <BEHAVIORAL>).
+
+Analyzing hierarchy for entity <ALU> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <ID_EX_Buffer> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <register_file> in library <work> (architecture <behavioural>).
+
+Analyzing hierarchy for entity <IF_ID_Buffer> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <EX_MEM_Buffer> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <MUX2_8bit> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <PC> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <Memory> in library <work> (architecture <CFG>).
+
+Analyzing hierarchy for entity <RAM> in library <work> (architecture <Behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <Processor> in library <work> (Architecture <BEHAVIORAL>).
+Entity <Processor> analyzed. Unit <Processor> generated.
+
+Analyzing Entity <ALU> in library <work> (Architecture <Behavioral>).
+Entity <ALU> analyzed. Unit <ALU> generated.
+
+Analyzing Entity <ID_EX_Buffer> in library <work> (Architecture <Behavioral>).
+Entity <ID_EX_Buffer> analyzed. Unit <ID_EX_Buffer> generated.
+
+Analyzing Entity <register_file> in library <work> (Architecture <behavioural>).
+Entity <register_file> analyzed. Unit <register_file> generated.
+
+Analyzing Entity <IF_ID_Buffer> in library <work> (Architecture <Behavioral>).
+Entity <IF_ID_Buffer> analyzed. Unit <IF_ID_Buffer> generated.
+
+Analyzing Entity <EX_MEM_Buffer> in library <work> (Architecture <Behavioral>).
+Entity <EX_MEM_Buffer> analyzed. Unit <EX_MEM_Buffer> generated.
+
+Analyzing Entity <MUX2_8bit> in library <work> (Architecture <Behavioral>).
+Entity <MUX2_8bit> analyzed. Unit <MUX2_8bit> generated.
+
+Analyzing Entity <PC> in library <work> (Architecture <Behavioral>).
+Entity <PC> analyzed. Unit <PC> generated.
+
+Analyzing Entity <Memory> in library <work> (Architecture <CFG>).
+Entity <Memory> analyzed. Unit <Memory> generated.
+
+Analyzing Entity <RAM> in library <work> (Architecture <Behavioral>).
+Entity <RAM> analyzed. Unit <RAM> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <ALU>.
+    Related source file is "//samba.engr.uvic.ca/home/kloftis/CENG 450/CENG 450 Final/450Processor/ALU.vhd".
+    Found 1-bit register for signal <z_flag>.
+    Found 1-bit register for signal <n_flag>.
+    Found 8-bit adder for signal <add0000$add0000> created at line 72.
+    Found 8-bit subtractor for signal <sub0000$sub0000> created at line 79.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+Unit <ALU> synthesized.
+
+
+Synthesizing Unit <ID_EX_Buffer>.
+    Related source file is "//samba.engr.uvic.ca/home/kloftis/CENG 450/CENG 450 Final/450Processor/ID_EX_Buffer.vhd".
+    Register <wb_op> equivalent to <oldwb_op> has been removed
+    Register <ra_out> equivalent to <ra_old> has been removed
+    Found 1-bit register for signal <lr_goto>.
+    Found 8-bit register for signal <mem_addr_out>.
+    Found 8-bit register for signal <data1_out>.
+    Found 1-bit register for signal <br>.
+    Found 3-bit register for signal <alu_mode_out>.
+    Found 1-bit register for signal <use_memory>.
+    Found 1-bit register for signal <io_op>.
+    Found 8-bit register for signal <data2_out>.
+    Found 1-bit register for signal <mem_op>.
+    Found 1-bit register for signal <pc_en>.
+    Found 2-bit comparator equal for signal <data1_out$cmp_eq0000> created at line 103.
+    Found 2-bit comparator equal for signal <data1_out$cmp_eq0001> created at line 111.
+    Found 1-bit register for signal <oldwb_op>.
+    Found 2-bit register for signal <ra_old>.
+    Summary:
+	inferred  36 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+Unit <ID_EX_Buffer> synthesized.
+
+
+Synthesizing Unit <register_file>.
+    Related source file is "//samba.engr.uvic.ca/home/kloftis/CENG 450/CENG 450 Final/450Processor/Register.vhd".
+    Found 8-bit 4-to-1 multiplexer for signal <rd_data1>.
+    Found 8-bit 4-to-1 multiplexer for signal <rd_data2>.
+    Found 32-bit register for signal <reg_file>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+	inferred  16 Multiplexer(s).
+Unit <register_file> synthesized.
+
+
+Synthesizing Unit <IF_ID_Buffer>.
+    Related source file is "//samba.engr.uvic.ca/home/kloftis/CENG 450/CENG 450 Final/450Processor/IF_ID_Buffer.vhd".
+    Found 1-bit register for signal <DIS>.
+    Found 8-bit register for signal <input_port_out>.
+    Found 2-bit register for signal <ra>.
+    Found 2-bit register for signal <rb>.
+    Found 1-bit register for signal <pc_incr_2>.
+    Found 1-bit register for signal <lr_rtrn>.
+    Found 8-bit register for signal <mem_out>.
+    Found 4-bit register for signal <opcode>.
+    Summary:
+	inferred  27 D-type flip-flop(s).
+Unit <IF_ID_Buffer> synthesized.
+
+
+Synthesizing Unit <EX_MEM_Buffer>.
+    Related source file is "//samba.engr.uvic.ca/home/kloftis/CENG 450/CENG 450 Final/450Processor/EX_MEM_Buffer.vhd".
+    Found 8-bit tristate buffer for signal <output_port>.
+    Found 2-bit register for signal <ra_out>.
+    Found 1-bit register for signal <wb_op_out>.
+    Found 8-bit register for signal <result_out>.
+    Found 8-bit register for signal <Mtridata_output_port> created at line 67.
+    Found 1-bit register for signal <Mtrien_output_port> created at line 67.
+    Summary:
+	inferred  20 D-type flip-flop(s).
+	inferred   8 Tristate(s).
+Unit <EX_MEM_Buffer> synthesized.
+
+
+Synthesizing Unit <MUX2_8bit>.
+    Related source file is "//samba.engr.uvic.ca/home/kloftis/CENG 450/CENG 450 Final/450Processor/MUX2_8bit.vhd".
+Unit <MUX2_8bit> synthesized.
+
+
+Synthesizing Unit <PC>.
+    Related source file is "//samba.engr.uvic.ca/home/kloftis/CENG 450/CENG 450 Final/450Processor/PC.vhd".
+WARNING:Xst:737 - Found 1-bit latch for signal <enabled>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 8-bit register for signal <PC_OUT>.
+    Found 8-bit register for signal <LR_VAL>.
+    Found 8-bit adder for signal <LR_VAL$add0000> created at line 80.
+    Found 8-bit register for signal <PC>.
+    Found 8-bit adder for signal <PC$addsub0000> created at line 90.
+    Summary:
+	inferred  24 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+Unit <PC> synthesized.
+
+
+Synthesizing Unit <Memory>.
+    Related source file is "//samba.engr.uvic.ca/home/kloftis/CENG 450/CENG 450 Final/450Processor/Memory.vhd".
+    Found 256x8-bit ROM for signal <dout2$rom0000> created at line 130.
+    Found 256x8-bit ROM for signal <dout$rom0000> created at line 129.
+    Found 8-bit adder for signal <$add0000> created at line 130.
+    Summary:
+	inferred   2 ROM(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <Memory> synthesized.
+
+
+Synthesizing Unit <RAM>.
+    Related source file is "//samba.engr.uvic.ca/home/kloftis/CENG 450/CENG 450 Final/450Processor/RAM.vhd".
+    Found 8-bit 256-to-1 multiplexer for signal <rd_data>.
+    Found 2048-bit register for signal <mem_file>.
+INFO:Xst:738 - HDL ADVISOR - 2048 flip-flops were inferred for signal <mem_file>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+    Summary:
+	inferred 2048 D-type flip-flop(s).
+	inferred   8 Multiplexer(s).
+Unit <RAM> synthesized.
+
+
+Synthesizing Unit <Processor>.
+    Related source file is "//samba.engr.uvic.ca/home/kloftis/CENG 450/CENG 450 Final/450Processor/Processor.vhf".
+Unit <Processor> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 2
+ 256x8-bit ROM                                         : 2
+# Adders/Subtractors                                   : 5
+ 8-bit adder                                           : 4
+ 8-bit subtractor                                      : 1
+# Registers                                            : 290
+ 1-bit register                                        : 14
+ 2-bit register                                        : 4
+ 3-bit register                                        : 1
+ 4-bit register                                        : 1
+ 8-bit register                                        : 270
+# Latches                                              : 1
+ 1-bit latch                                           : 1
+# Comparators                                          : 2
+ 2-bit comparator equal                                : 2
+# Multiplexers                                         : 3
+ 8-bit 256-to-1 multiplexer                            : 1
+ 8-bit 4-to-1 multiplexer                              : 2
+# Tristates                                            : 1
+ 8-bit tristate buffer                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+INFO:Xst:2261 - The FF/Latch <result_out_2> in Unit <XLXI_14> is equivalent to the following FF/Latch, which will be removed : <Mtridata_output_port_2> 
+INFO:Xst:2261 - The FF/Latch <result_out_3> in Unit <XLXI_14> is equivalent to the following FF/Latch, which will be removed : <Mtridata_output_port_3> 
+INFO:Xst:2261 - The FF/Latch <result_out_4> in Unit <XLXI_14> is equivalent to the following FF/Latch, which will be removed : <Mtridata_output_port_4> 
+INFO:Xst:2261 - The FF/Latch <result_out_5> in Unit <XLXI_14> is equivalent to the following FF/Latch, which will be removed : <Mtridata_output_port_5> 
+INFO:Xst:2261 - The FF/Latch <result_out_6> in Unit <XLXI_14> is equivalent to the following FF/Latch, which will be removed : <Mtridata_output_port_6> 
+INFO:Xst:2261 - The FF/Latch <result_out_7> in Unit <XLXI_14> is equivalent to the following FF/Latch, which will be removed : <Mtridata_output_port_7> 
+INFO:Xst:2261 - The FF/Latch <result_out_0> in Unit <XLXI_14> is equivalent to the following FF/Latch, which will be removed : <Mtridata_output_port_0> 
+INFO:Xst:2261 - The FF/Latch <result_out_1> in Unit <XLXI_14> is equivalent to the following FF/Latch, which will be removed : <Mtridata_output_port_1> 
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 2
+ 256x8-bit ROM                                         : 2
+# Adders/Subtractors                                   : 5
+ 8-bit adder                                           : 4
+ 8-bit subtractor                                      : 1
+# Registers                                            : 2189
+ Flip-Flops                                            : 2189
+# Latches                                              : 1
+ 1-bit latch                                           : 1
+# Comparators                                          : 2
+ 2-bit comparator equal                                : 2
+# Multiplexers                                         : 17
+ 1-bit 4-to-1 multiplexer                              : 16
+ 8-bit 256-to-1 multiplexer                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <result_out_2> in Unit <EX_MEM_Buffer> is equivalent to the following FF/Latch, which will be removed : <Mtridata_output_port_2> 
+INFO:Xst:2261 - The FF/Latch <result_out_3> in Unit <EX_MEM_Buffer> is equivalent to the following FF/Latch, which will be removed : <Mtridata_output_port_3> 
+INFO:Xst:2261 - The FF/Latch <result_out_4> in Unit <EX_MEM_Buffer> is equivalent to the following FF/Latch, which will be removed : <Mtridata_output_port_4> 
+INFO:Xst:2261 - The FF/Latch <result_out_5> in Unit <EX_MEM_Buffer> is equivalent to the following FF/Latch, which will be removed : <Mtridata_output_port_5> 
+INFO:Xst:2261 - The FF/Latch <result_out_6> in Unit <EX_MEM_Buffer> is equivalent to the following FF/Latch, which will be removed : <Mtridata_output_port_6> 
+INFO:Xst:2261 - The FF/Latch <result_out_7> in Unit <EX_MEM_Buffer> is equivalent to the following FF/Latch, which will be removed : <Mtridata_output_port_7> 
+INFO:Xst:2261 - The FF/Latch <result_out_0> in Unit <EX_MEM_Buffer> is equivalent to the following FF/Latch, which will be removed : <Mtridata_output_port_0> 
+INFO:Xst:2261 - The FF/Latch <result_out_1> in Unit <EX_MEM_Buffer> is equivalent to the following FF/Latch, which will be removed : <Mtridata_output_port_1> 
+
+Optimizing unit <Processor> ...
+
+Optimizing unit <ALU> ...
+
+Optimizing unit <ID_EX_Buffer> ...
+
+Optimizing unit <register_file> ...
+
+Optimizing unit <IF_ID_Buffer> ...
+
+Optimizing unit <PC> ...
+
+Optimizing unit <RAM> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Processor, actual ratio is 25.
+FlipFlop XLXI_10/data1_out_0 has been replicated 4 time(s)
+FlipFlop XLXI_10/data1_out_1 has been replicated 4 time(s)
+FlipFlop XLXI_10/data1_out_2 has been replicated 3 time(s)
+FlipFlop XLXI_10/data1_out_3 has been replicated 4 time(s)
+FlipFlop XLXI_10/data1_out_4 has been replicated 4 time(s)
+FlipFlop XLXI_10/data1_out_5 has been replicated 4 time(s)
+FlipFlop XLXI_10/data1_out_6 has been replicated 3 time(s)
+FlipFlop XLXI_10/data1_out_7 has been replicated 3 time(s)
+FlipFlop XLXI_10/mem_addr_out_0 has been replicated 11 time(s)
+FlipFlop XLXI_10/mem_addr_out_1 has been replicated 6 time(s)
+FlipFlop XLXI_10/mem_addr_out_2 has been replicated 5 time(s)
+FlipFlop XLXI_10/mem_addr_out_3 has been replicated 1 time(s)
+FlipFlop XLXI_10/mem_addr_out_4 has been replicated 3 time(s)
+FlipFlop XLXI_10/mem_addr_out_5 has been replicated 2 time(s)
+FlipFlop XLXI_19/PC_OUT_0 has been replicated 1 time(s)
+FlipFlop XLXI_19/PC_OUT_1 has been replicated 1 time(s)
+FlipFlop XLXI_19/PC_OUT_2 has been replicated 2 time(s)
+FlipFlop XLXI_19/PC_OUT_3 has been replicated 1 time(s)
+FlipFlop XLXI_19/PC_OUT_4 has been replicated 1 time(s)
+FlipFlop XLXI_19/PC_OUT_5 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 2245
+ Flip-Flops                                            : 2245
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : Processor.ngr
+Top Level Output File Name         : Processor
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 133
+
+Cell Usage :
+# BELS                             : 2829
+#      BUF                         : 21
+#      GND                         : 1
+#      INV                         : 2
+#      LUT2                        : 40
+#      LUT2_D                      : 2
+#      LUT2_L                      : 3
+#      LUT3                        : 1147
+#      LUT3_L                      : 3
+#      LUT4                        : 472
+#      LUT4_D                      : 42
+#      LUT4_L                      : 22
+#      MUXCY                       : 14
+#      MUXF5                       : 585
+#      MUXF6                       : 266
+#      MUXF7                       : 128
+#      MUXF8                       : 64
+#      VCC                         : 1
+#      XORCY                       : 16
+# FlipFlops/Latches                : 2246
+#      FD                          : 35
+#      FDE                         : 90
+#      FDR                         : 17
+#      FDR_1                       : 4
+#      FDRE                        : 16
+#      FDRE_1                      : 2080
+#      FDRS                        : 1
+#      FDRS_1                      : 1
+#      FDS                         : 1
+#      LDP                         : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 132
+#      IBUF                        : 9
+#      OBUF                        : 115
+#      OBUFT                       : 8
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s1000fg320-4 
+
+ Number of Slices:                     1971  out of   7680    25%  
+ Number of Slice Flip Flops:           2246  out of  15360    14%  
+ Number of 4 input LUTs:               1733  out of  15360    11%  
+ Number of IOs:                         133
+ Number of bonded IOBs:                 133  out of    221    60%  
+ Number of GCLKs:                         1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLK                                | BUFGP                  | 2245  |
+XLXI_13/DIS                        | NONE(XLXI_19/enabled)  | 1     |
+-----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-------------------------------------------------+------------------------+-------+
+Control Signal                                   | Buffer(FF name)        | Load  |
+-------------------------------------------------+------------------------+-------+
+XLXI_19/enabled_or0000(XLXI_19/enabled_or00001:O)| NONE(XLXI_19/enabled)  | 1     |
+-------------------------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 19.016ns (Maximum Frequency: 52.587MHz)
+   Minimum input arrival time before clock: 12.228ns
+   Maximum output required time after clock: 17.205ns
+   Maximum combinational path delay: 15.477ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 19.016ns (frequency: 52.587MHz)
+  Total number of paths / destination ports: 59195 / 4328
+-------------------------------------------------------------------------
+Delay:               9.508ns (Levels of Logic = 5)
+  Source:            XLXI_19/PC_OUT_1_1 (FF)
+  Destination:       XLXI_13/pc_incr_2 (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK falling
+
+  Data Path: XLXI_19/PC_OUT_1_1 to XLXI_13/pc_incr_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             11   0.720   1.483  XLXI_19/PC_OUT_1_1 (XLXI_19/PC_OUT_1_1)
+     LUT4:I0->O            1   0.551   0.000  XLXI_20/Mrom_dout_rom0000291_10_F (N239)
+     MUXF5:I0->O           1   0.360   0.827  XLXI_20/Mrom_dout_rom0000291_10 (XLXI_20/Mrom_dout_rom0000291_10)
+     LUT4:I3->O            1   0.551   0.827  XLXI_20/Mrom_dout_rom0000291_8_f5 (XLXI_20/Mrom_dout_rom0000291_8_f5)
+     LUT4:I3->O            5   0.551   1.260  PC_OUT<7>6 (IF_INSTR_5_OBUF)
+     LUT4:I0->O            1   0.551   0.801  XLXI_13/pc_incr_2_not00011 (XLXI_13/pc_incr_2_not0001)
+     FDR_1:R                   1.026          XLXI_13/pc_incr_2
+    ----------------------------------------
+    Total                      9.508ns (4.310ns logic, 5.198ns route)
+                                       (45.3% logic, 54.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
+  Total number of paths / destination ports: 2470 / 2267
+-------------------------------------------------------------------------
+Offset:              12.228ns (Levels of Logic = 8)
+  Source:            RST (PAD)
+  Destination:       XLXI_10/data1_out_7 (FF)
+  Destination Clock: CLK rising
+
+  Data Path: RST to XLXI_10/data1_out_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            97   0.821   2.225  RST_IBUF (RST_IBUF)
+     BUF:I->O             97   0.551   2.293  RST_IBUF_1 (RST_IBUF_1)
+     LUT4:I2->O            1   0.551   0.000  XLXI_9/result<7>3 (XLXI_9/result<7>2)
+     MUXF5:I0->O           1   0.360   0.000  XLXI_9/result<7>_f5 (XLXI_9/result<7>_f5)
+     MUXF6:I0->O           7   0.342   1.405  XLXI_9/result<7>_f6 (EX_ALU_RESULT_7_OBUF)
+     LUT4:I0->O            1   0.551   0.827  XLXI_18/o<7>1_SW0 (N93)
+     LUT4:I3->O            1   0.551   0.996  XLXI_10/data1_out_mux0006<7>79_SW0 (N99)
+     LUT4:I1->O            4   0.551   0.000  XLXI_10/data1_out_mux0006<7>79 (XLXI_10/data1_out_mux0006<7>)
+     FDE:D                     0.203          XLXI_10/data1_out_7
+    ----------------------------------------
+    Total                     12.228ns (4.481ns logic, 7.747ns route)
+                                       (36.6% logic, 63.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 9546 / 123
+-------------------------------------------------------------------------
+Offset:              17.205ns (Levels of Logic = 7)
+  Source:            XLXI_19/PC_OUT_1 (FF)
+  Destination:       IF_INSTR2<0> (PAD)
+  Source Clock:      CLK rising
+
+  Data Path: XLXI_19/PC_OUT_1 to IF_INSTR2<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             46   0.720   2.272  XLXI_19/PC_OUT_1 (XLXI_19/PC_OUT_1)
+     LUT4:I0->O           11   0.551   1.339  XLXI_20/_add0000<4>11 (XLXI_20/_add0000<4>_bdd0)
+     LUT2:I1->O            3   0.551   1.246  XLXI_20/_add0000<4>2 (XLXI_20/_add0000<4>)
+     LUT4:I0->O            1   0.551   0.996  XLXI_20/Mrom_dout2_rom000031_7_SW0 (N213)
+     LUT3:I1->O            1   0.551   0.000  XLXI_20/Mrom_dout2_rom000031_7 (XLXI_20/Mrom_dout2_rom000031_7)
+     MUXF5:I0->O           1   0.360   0.996  XLXI_20/Mrom_dout2_rom000031_5_f5 (XLXI_20/Mrom_dout2_rom000031_5_f5)
+     LUT2:I1->O            2   0.551   0.877  XLXI_20/_add0000<7>11 (IF_INSTR2_0_OBUF)
+     OBUF:I->O                 5.644          IF_INSTR2_0_OBUF (IF_INSTR2<0>)
+    ----------------------------------------
+    Total                     17.205ns (9.479ns logic, 7.726ns route)
+                                       (55.1% logic, 44.9% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 24 / 16
+-------------------------------------------------------------------------
+Delay:               15.477ns (Levels of Logic = 7)
+  Source:            RST (PAD)
+  Destination:       EX_RESULT<7> (PAD)
+
+  Data Path: RST to EX_RESULT<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            97   0.821   2.225  RST_IBUF (RST_IBUF)
+     BUF:I->O             97   0.551   2.293  RST_IBUF_1 (RST_IBUF_1)
+     LUT4:I2->O            1   0.551   0.000  XLXI_9/result<7>3 (XLXI_9/result<7>2)
+     MUXF5:I0->O           1   0.360   0.000  XLXI_9/result<7>_f5 (XLXI_9/result<7>_f5)
+     MUXF6:I0->O           7   0.342   1.261  XLXI_9/result<7>_f6 (EX_ALU_RESULT_7_OBUF)
+     LUT3:I1->O            2   0.551   0.877  XLXI_18/o<7>1 (EX_RESULT_7_OBUF)
+     OBUF:I->O                 5.644          EX_RESULT_7_OBUF (EX_RESULT<7>)
+    ----------------------------------------
+    Total                     15.477ns (8.820ns logic, 6.657ns route)
+                                       (57.0% logic, 43.0% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 28.00 secs
+Total CPU time to Xst completion: 27.80 secs
+ 
+--> 
+
+Total memory usage is 229356 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :   18 (   0 filtered)
+

@@ -1,0 +1,6 @@
+CommandLine
+C:\Xilinx\10.1\ISE\bin\nt\unwrapped\xst.exe -ise C:/Documents and Settings/kloftis/Desktop/CENG 450 - KL/count_mem_sch/count_mem_sch.ise -intstyle ise -ifn C:/Documents and Settings/kloftis/Desktop/CENG 450 - KL/count_mem_sch/count_mem.xst -ofn C:/Documents and Settings/kloftis/Desktop/CENG 450 - KL/count_mem_sch/count_mem.syr -finalclean 1
+s
+FormatString
+xst [-ifn <InputFile>] [-ofn <OutputFile>] [-ise <iseProjectFile>] [--quiet] [-intstyle <Style>] [--deb <DebugLevel>] [--finalclean <Clean>] [--PcubeFlow] [--globOptFlow] [--XstNtrc]
+s

@@ -1,0 +1,401 @@
+--------------------------------------------------------------------------------
+-- Copyright (c) 1995-2003 Xilinx, Inc.
+-- All Right Reserved.
+--------------------------------------------------------------------------------
+--   ____  ____ 
+--  /   /\/   / 
+-- /___/  \  /    Vendor: Xilinx 
+-- \   \   \/     Version : 10.1.03
+--  \   \         Application : ISE
+--  /   /         Filename : PC_TB.ant
+-- /___/   /\     Timestamp : Tue Mar 11 14:59:26 2014
+-- \   \  /  \ 
+--  \___\/\___\ 
+--
+--Command: 
+--Design Name: PC_TB
+--Device: Xilinx
+--
+
+library UNISIM;
+use UNISIM.Vcomponents.ALL;
+library ieee;
+use ieee.std_logic_1164.ALL;
+use ieee.numeric_std.ALL;
+USE IEEE.STD_LOGIC_TEXTIO.ALL;
+USE IEEE.STD_LOGIC_ARITH.ALL;
+USE IEEE.STD_LOGIC_UNSIGNED.ALL;
+USE STD.TEXTIO.ALL;
+
+ENTITY PC_TB IS
+END PC_TB;
+
+ARCHITECTURE testbench_arch OF PC_TB IS
+    FILE RESULTS: TEXT OPEN WRITE_MODE IS "C:\Documents and Settings\kloftis\Desktop\CENG 450 Milestone 1.1\450Processor\PC_TB.ano";
+
+    COMPONENT Processor
+        PORT (
+            BR : In std_logic;
+            CLK : In std_logic;
+            DIS : In std_logic;
+            EN : In std_logic;
+            INPUT_PORT : In std_logic_vector (7 DownTo 0);
+            INSTR : In std_logic_vector (7 DownTo 0);
+            LR_goto : In std_logic;
+            LR_rtrn : In std_logic;
+            PV_IN : In std_logic_vector (7 DownTo 0);
+            RST : In std_logic;
+            ALU_IN_1 : Out std_logic_vector (7 DownTo 0);
+            ALU_IN_2 : Out std_logic_vector (7 DownTo 0);
+            ALU_MODE : Out std_logic_vector (2 DownTo 0);
+            FWD : Out std_logic_vector (7 DownTo 0);
+            OUTPUT_PORT : Out std_logic_vector (7 DownTo 0);
+            PC_OUT : Out std_logic_vector (7 DownTo 0);
+            RA_OUT : Out std_logic_vector (1 DownTo 0);
+            RD_DATA_1 : Out std_logic_vector (7 DownTo 0);
+            RD_DATA_2 : Out std_logic_vector (7 DownTo 0);
+            WB_DATA_OUT : Out std_logic_vector (7 DownTo 0);
+            WB_OP : Out std_logic
+        );
+    END COMPONENT;
+
+    SIGNAL BR : std_logic := '0';
+    SIGNAL CLK : std_logic := '0';
+    SIGNAL DIS : std_logic := '0';
+    SIGNAL EN : std_logic := '0';
+    SIGNAL INPUT_PORT : std_logic_vector (7 DownTo 0) := "00000000";
+    SIGNAL INSTR : std_logic_vector (7 DownTo 0) := "00000000";
+    SIGNAL LR_goto : std_logic := '0';
+    SIGNAL LR_rtrn : std_logic := '0';
+    SIGNAL PV_IN : std_logic_vector (7 DownTo 0) := "00000000";
+    SIGNAL RST : std_logic := '0';
+    SIGNAL ALU_IN_1 : std_logic_vector (7 DownTo 0) := "00000000";
+    SIGNAL ALU_IN_2 : std_logic_vector (7 DownTo 0) := "00000000";
+    SIGNAL ALU_MODE : std_logic_vector (2 DownTo 0) := "000";
+    SIGNAL FWD : std_logic_vector (7 DownTo 0) := "00000000";
+    SIGNAL OUTPUT_PORT : std_logic_vector (7 DownTo 0) := "00000000";
+    SIGNAL PC_OUT : std_logic_vector (7 DownTo 0) := "00000000";
+    SIGNAL RA_OUT : std_logic_vector (1 DownTo 0) := "00";
+    SIGNAL RD_DATA_1 : std_logic_vector (7 DownTo 0) := "00000000";
+    SIGNAL RD_DATA_2 : std_logic_vector (7 DownTo 0) := "00000000";
+    SIGNAL WB_DATA_OUT : std_logic_vector (7 DownTo 0) := "00000000";
+    SIGNAL WB_OP : std_logic := '0';
+
+    SHARED VARIABLE TX_ERROR : INTEGER := 0;
+    SHARED VARIABLE TX_OUT : LINE;
+
+    constant PERIOD : time := 200 ns;
+    constant DUTY_CYCLE : real := 0.5;
+    constant OFFSET : time := 100 ns;
+
+    BEGIN
+        UUT : Processor
+        PORT MAP (
+            BR => BR,
+            CLK => CLK,
+            DIS => DIS,
+            EN => EN,
+            INPUT_PORT => INPUT_PORT,
+            INSTR => INSTR,
+            LR_goto => LR_goto,
+            LR_rtrn => LR_rtrn,
+            PV_IN => PV_IN,
+            RST => RST,
+            ALU_IN_1 => ALU_IN_1,
+            ALU_IN_2 => ALU_IN_2,
+            ALU_MODE => ALU_MODE,
+            FWD => FWD,
+            OUTPUT_PORT => OUTPUT_PORT,
+            PC_OUT => PC_OUT,
+            RA_OUT => RA_OUT,
+            RD_DATA_1 => RD_DATA_1,
+            RD_DATA_2 => RD_DATA_2,
+            WB_DATA_OUT => WB_DATA_OUT,
+            WB_OP => WB_OP
+        );
+
+        PROCESS    -- clock process for CLK
+        BEGIN
+            WAIT for OFFSET;
+            CLOCK_LOOP : LOOP
+                CLK <= '0';
+                WAIT FOR (PERIOD - (PERIOD * DUTY_CYCLE));
+                CLK <= '1';
+                WAIT FOR (PERIOD * DUTY_CYCLE);
+            END LOOP CLOCK_LOOP;
+        END PROCESS;
+
+        PROCESS    -- Annotation process for CLK
+            VARIABLE TX_TIME : INTEGER := 0;
+
+            PROCEDURE ANNOTATE_ALU_IN_1(
+                TX_TIME : INTEGER
+            ) IS
+                VARIABLE TX_STR : String(1 to 4096);
+                VARIABLE TX_LOC : LINE;
+            BEGIN
+                STD.TEXTIO.write(TX_LOC, string'("Annotate["));
+                STD.TEXTIO.write(TX_LOC, TX_TIME);
+                STD.TEXTIO.write(TX_LOC, string'(", ALU_IN_1, "));
+                IEEE.STD_LOGIC_TEXTIO.write(TX_LOC, ALU_IN_1);
+                STD.TEXTIO.write(TX_LOC, string'("]"));
+                TX_STR(TX_LOC.all'range) := TX_LOC.all;
+                STD.TEXTIO.writeline(RESULTS, TX_LOC);
+                STD.TEXTIO.Deallocate(TX_LOC);
+            END;
+            PROCEDURE ANNOTATE_ALU_IN_2(
+                TX_TIME : INTEGER
+            ) IS
+                VARIABLE TX_STR : String(1 to 4096);
+                VARIABLE TX_LOC : LINE;
+            BEGIN
+                STD.TEXTIO.write(TX_LOC, string'("Annotate["));
+                STD.TEXTIO.write(TX_LOC, TX_TIME);
+                STD.TEXTIO.write(TX_LOC, string'(", ALU_IN_2, "));
+                IEEE.STD_LOGIC_TEXTIO.write(TX_LOC, ALU_IN_2);
+                STD.TEXTIO.write(TX_LOC, string'("]"));
+                TX_STR(TX_LOC.all'range) := TX_LOC.all;
+                STD.TEXTIO.writeline(RESULTS, TX_LOC);
+                STD.TEXTIO.Deallocate(TX_LOC);
+            END;
+            PROCEDURE ANNOTATE_ALU_MODE(
+                TX_TIME : INTEGER
+            ) IS
+                VARIABLE TX_STR : String(1 to 4096);
+                VARIABLE TX_LOC : LINE;
+            BEGIN
+                STD.TEXTIO.write(TX_LOC, string'("Annotate["));
+                STD.TEXTIO.write(TX_LOC, TX_TIME);
+                STD.TEXTIO.write(TX_LOC, string'(", ALU_MODE, "));
+                IEEE.STD_LOGIC_TEXTIO.write(TX_LOC, ALU_MODE);
+                STD.TEXTIO.write(TX_LOC, string'("]"));
+                TX_STR(TX_LOC.all'range) := TX_LOC.all;
+                STD.TEXTIO.writeline(RESULTS, TX_LOC);
+                STD.TEXTIO.Deallocate(TX_LOC);
+            END;
+            PROCEDURE ANNOTATE_FWD(
+                TX_TIME : INTEGER
+            ) IS
+                VARIABLE TX_STR : String(1 to 4096);
+                VARIABLE TX_LOC : LINE;
+            BEGIN
+                STD.TEXTIO.write(TX_LOC, string'("Annotate["));
+                STD.TEXTIO.write(TX_LOC, TX_TIME);
+                STD.TEXTIO.write(TX_LOC, string'(", FWD, "));
+                IEEE.STD_LOGIC_TEXTIO.write(TX_LOC, FWD);
+                STD.TEXTIO.write(TX_LOC, string'("]"));
+                TX_STR(TX_LOC.all'range) := TX_LOC.all;
+                STD.TEXTIO.writeline(RESULTS, TX_LOC);
+                STD.TEXTIO.Deallocate(TX_LOC);
+            END;
+            PROCEDURE ANNOTATE_OUTPUT_PORT(
+                TX_TIME : INTEGER
+            ) IS
+                VARIABLE TX_STR : String(1 to 4096);
+                VARIABLE TX_LOC : LINE;
+            BEGIN
+                STD.TEXTIO.write(TX_LOC, string'("Annotate["));
+                STD.TEXTIO.write(TX_LOC, TX_TIME);
+                STD.TEXTIO.write(TX_LOC, string'(", OUTPUT_PORT, "));
+                IEEE.STD_LOGIC_TEXTIO.write(TX_LOC, OUTPUT_PORT);
+                STD.TEXTIO.write(TX_LOC, string'("]"));
+                TX_STR(TX_LOC.all'range) := TX_LOC.all;
+                STD.TEXTIO.writeline(RESULTS, TX_LOC);
+                STD.TEXTIO.Deallocate(TX_LOC);
+            END;
+            PROCEDURE ANNOTATE_PC_OUT(
+                TX_TIME : INTEGER
+            ) IS
+                VARIABLE TX_STR : String(1 to 4096);
+                VARIABLE TX_LOC : LINE;
+            BEGIN
+                STD.TEXTIO.write(TX_LOC, string'("Annotate["));
+                STD.TEXTIO.write(TX_LOC, TX_TIME);
+                STD.TEXTIO.write(TX_LOC, string'(", PC_OUT, "));
+                IEEE.STD_LOGIC_TEXTIO.write(TX_LOC, PC_OUT);
+                STD.TEXTIO.write(TX_LOC, string'("]"));
+                TX_STR(TX_LOC.all'range) := TX_LOC.all;
+                STD.TEXTIO.writeline(RESULTS, TX_LOC);
+                STD.TEXTIO.Deallocate(TX_LOC);
+            END;
+            PROCEDURE ANNOTATE_RA_OUT(
+                TX_TIME : INTEGER
+            ) IS
+                VARIABLE TX_STR : String(1 to 4096);
+                VARIABLE TX_LOC : LINE;
+            BEGIN
+                STD.TEXTIO.write(TX_LOC, string'("Annotate["));
+                STD.TEXTIO.write(TX_LOC, TX_TIME);
+                STD.TEXTIO.write(TX_LOC, string'(", RA_OUT, "));
+                IEEE.STD_LOGIC_TEXTIO.write(TX_LOC, RA_OUT);
+                STD.TEXTIO.write(TX_LOC, string'("]"));
+                TX_STR(TX_LOC.all'range) := TX_LOC.all;
+                STD.TEXTIO.writeline(RESULTS, TX_LOC);
+                STD.TEXTIO.Deallocate(TX_LOC);
+            END;
+            PROCEDURE ANNOTATE_RD_DATA_1(
+                TX_TIME : INTEGER
+            ) IS
+                VARIABLE TX_STR : String(1 to 4096);
+                VARIABLE TX_LOC : LINE;
+            BEGIN
+                STD.TEXTIO.write(TX_LOC, string'("Annotate["));
+                STD.TEXTIO.write(TX_LOC, TX_TIME);
+                STD.TEXTIO.write(TX_LOC, string'(", RD_DATA_1, "));
+                IEEE.STD_LOGIC_TEXTIO.write(TX_LOC, RD_DATA_1);
+                STD.TEXTIO.write(TX_LOC, string'("]"));
+                TX_STR(TX_LOC.all'range) := TX_LOC.all;
+                STD.TEXTIO.writeline(RESULTS, TX_LOC);
+                STD.TEXTIO.Deallocate(TX_LOC);
+            END;
+            PROCEDURE ANNOTATE_RD_DATA_2(
+                TX_TIME : INTEGER
+            ) IS
+                VARIABLE TX_STR : String(1 to 4096);
+                VARIABLE TX_LOC : LINE;
+            BEGIN
+                STD.TEXTIO.write(TX_LOC, string'("Annotate["));
+                STD.TEXTIO.write(TX_LOC, TX_TIME);
+                STD.TEXTIO.write(TX_LOC, string'(", RD_DATA_2, "));
+                IEEE.STD_LOGIC_TEXTIO.write(TX_LOC, RD_DATA_2);
+                STD.TEXTIO.write(TX_LOC, string'("]"));
+                TX_STR(TX_LOC.all'range) := TX_LOC.all;
+                STD.TEXTIO.writeline(RESULTS, TX_LOC);
+                STD.TEXTIO.Deallocate(TX_LOC);
+            END;
+            PROCEDURE ANNOTATE_WB_DATA_OUT(
+                TX_TIME : INTEGER
+            ) IS
+                VARIABLE TX_STR : String(1 to 4096);
+                VARIABLE TX_LOC : LINE;
+            BEGIN
+                STD.TEXTIO.write(TX_LOC, string'("Annotate["));
+                STD.TEXTIO.write(TX_LOC, TX_TIME);
+                STD.TEXTIO.write(TX_LOC, string'(", WB_DATA_OUT, "));
+                IEEE.STD_LOGIC_TEXTIO.write(TX_LOC, WB_DATA_OUT);
+                STD.TEXTIO.write(TX_LOC, string'("]"));
+                TX_STR(TX_LOC.all'range) := TX_LOC.all;
+                STD.TEXTIO.writeline(RESULTS, TX_LOC);
+                STD.TEXTIO.Deallocate(TX_LOC);
+            END;
+            PROCEDURE ANNOTATE_WB_OP(
+                TX_TIME : INTEGER
+            ) IS
+                VARIABLE TX_STR : String(1 to 4096);
+                VARIABLE TX_LOC : LINE;
+            BEGIN
+                STD.TEXTIO.write(TX_LOC, string'("Annotate["));
+                STD.TEXTIO.write(TX_LOC, TX_TIME);
+                STD.TEXTIO.write(TX_LOC, string'(", WB_OP, "));
+                IEEE.STD_LOGIC_TEXTIO.write(TX_LOC, WB_OP);
+                STD.TEXTIO.write(TX_LOC, string'("]"));
+                TX_STR(TX_LOC.all'range) := TX_LOC.all;
+                STD.TEXTIO.writeline(RESULTS, TX_LOC);
+                STD.TEXTIO.Deallocate(TX_LOC);
+            END;
+        BEGIN
+            WAIT for 1 fs;
+            ANNOTATE_ALU_IN_1(0);
+            ANNOTATE_ALU_IN_2(0);
+            ANNOTATE_ALU_MODE(0);
+            ANNOTATE_FWD(0);
+            ANNOTATE_OUTPUT_PORT(0);
+            ANNOTATE_PC_OUT(0);
+            ANNOTATE_RA_OUT(0);
+            ANNOTATE_RD_DATA_1(0);
+            ANNOTATE_RD_DATA_2(0);
+            ANNOTATE_WB_DATA_OUT(0);
+            ANNOTATE_WB_OP(0);
+            WAIT for OFFSET;
+            TX_TIME := TX_TIME + 100;
+            ANNO_LOOP : LOOP
+                --Rising Edge
+                WAIT for 115 ns;
+                TX_TIME := TX_TIME + 115;
+                ANNOTATE_ALU_IN_1(TX_TIME);
+                ANNOTATE_ALU_IN_2(TX_TIME);
+                ANNOTATE_ALU_MODE(TX_TIME);
+                ANNOTATE_FWD(TX_TIME);
+                ANNOTATE_OUTPUT_PORT(TX_TIME);
+                ANNOTATE_PC_OUT(TX_TIME);
+                ANNOTATE_RA_OUT(TX_TIME);
+                ANNOTATE_RD_DATA_1(TX_TIME);
+                ANNOTATE_RD_DATA_2(TX_TIME);
+                ANNOTATE_WB_DATA_OUT(TX_TIME);
+                ANNOTATE_WB_OP(TX_TIME);
+                WAIT for 85 ns;
+                TX_TIME := TX_TIME + 85;
+            END LOOP ANNO_LOOP;
+        END PROCESS;
+
+        PROCESS
+            BEGIN
+                -- -------------  Current Time:  785ns
+                WAIT FOR 785 ns;
+                RST <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  985ns
+                WAIT FOR 200 ns;
+                RST <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  1785ns
+                WAIT FOR 800 ns;
+                DIS <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  2385ns
+                WAIT FOR 600 ns;
+                BR <= '1';
+                EN <= '1';
+                PV_IN <= "10110100";
+                -- -------------------------------------
+                -- -------------  Current Time:  2585ns
+                WAIT FOR 200 ns;
+                BR <= '0';
+                DIS <= '0';
+                EN <= '0';
+                PV_IN <= "00000000";
+                -- -------------------------------------
+                -- -------------  Current Time:  3585ns
+                WAIT FOR 1000 ns;
+                DIS <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  4185ns
+                WAIT FOR 600 ns;
+                BR <= '1';
+                EN <= '1';
+                LR_goto <= '1';
+                PV_IN <= "01111010";
+                -- -------------------------------------
+                -- -------------  Current Time:  4385ns
+                WAIT FOR 200 ns;
+                BR <= '0';
+                DIS <= '0';
+                EN <= '0';
+                LR_goto <= '0';
+                PV_IN <= "00010000";
+                -- -------------------------------------
+                -- -------------  Current Time:  4785ns
+                WAIT FOR 400 ns;
+                PV_IN <= "00000000";
+                -- -------------------------------------
+                -- -------------  Current Time:  5385ns
+                WAIT FOR 600 ns;
+                BR <= '1';
+                LR_rtrn <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  5585ns
+                WAIT FOR 200 ns;
+                BR <= '0';
+                LR_rtrn <= '0';
+                -- -------------------------------------
+                WAIT FOR 4615 ns;
+
+                STD.TEXTIO.write(TX_OUT, string'("Total[]"));
+                STD.TEXTIO.writeline(RESULTS, TX_OUT);
+                ASSERT (FALSE) REPORT
+                    "Success! Simulation for annotation completed"
+                    SEVERITY FAILURE;
+            END PROCESS;
+
+    END testbench_arch;
+

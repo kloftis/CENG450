@@ -1,0 +1,15 @@
+NUM_USER_FILES
+4
+s
+user_file_1
+count_mem.sch
+s
+user_file_2
+../Memory.vhd
+s
+user_file_3
+count_mem_sch_tb.tbw
+s
+user_file_4
+count_mem_VHDL_pinout.ucf
+s
