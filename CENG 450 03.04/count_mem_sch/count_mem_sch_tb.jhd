@@ -1,3 +1,0 @@
-MODULE count_mem_sch_tb
-SUBMODULE count_mem
-INSTANCE UUT

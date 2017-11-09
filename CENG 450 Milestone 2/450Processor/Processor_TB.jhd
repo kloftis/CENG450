@@ -1,3 +1,0 @@
-MODULE Processor_TB
-SUBMODULE Processor
-INSTANCE UUT

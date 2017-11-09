@@ -1,7 +1,0 @@
-vhdl work "Register.vhd"
-vhdl work "MEM_WB_Buffer.vhd"
-vhdl work "IF_ID_Buffer.vhd"
-vhdl work "ID_EX_Buffer.vhd"
-vhdl work "EX_MEM_Buffer.vhd"
-vhdl work "ALU.vhd"
-vhdl work "Processor.vhf"
